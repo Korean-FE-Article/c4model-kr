@@ -1,12 +1,7 @@
 # Structurizr documentation
 
-This repo contains the source for the GitHub Pages/Jekyll website published at https://c4model.com
+- 번역본 링크: [https://korean-fe-article.github.io/c4model-kr/](https://korean-fe-article.github.io/c4model-kr/)
+- 원본 링크: [https://c4model.com](https://c4model.com)
 
-## Local authoring
-
-If you'd like to author/view the docs locally:
-
-1. `git clone https://github.com/simonbrowndotje/c4model.git`
-2. `cd c4model`
-3. `docker run -p 4000:4000 -v $(pwd):/site bretfisher/jekyll-serve`
-4. Open http://localhost:4000
+https://github.com/simonbrowndotje/c4model.git에 대한 번역본입니다.
+원본 글을 보고 싶다면, 이 [링크]()를 참고하세요.
