@@ -6,60 +6,42 @@ nav_order: 99
 permalink: /abstractions/faq
 ---
 
-# Frequently asked questions
+# 자주 묻는 질문
 
-## Can we change the terminology?
+## 용어를 변경해도 될까요?
 
-This terminology (context, containers, components and code) works for many organisations and many types of software. 
-However, sometimes an organisation will have an existing terminology that people are already familiar with. Or perhaps 
-"components" and "classes" don't easily map on to the technology being used (e.g. functional languages often use the 
-terms "module" and "function").
+이러한 용어(컨텍스트, 컨테이너, 구성 요소 및 코드)는 많은 조직과 다양한 유형의 소프트웨어에 적용됩니다.
+그러나 때로는 조직에 사람들이 이미 익숙한 기존 용어가 있을 수 있습니다. 또는 "컴포넌트"와 "클래스"가 사용 중인 기술에 쉽게 매핑되지 않을 수도 있습니다(예: 함수형 언어에서는 종종 "모듈"과 "함수"라는 용어를 사용함).
 
-Feel free to modify the terminology that you use to describe software architecture at different levels of abstraction. 
-Just make sure that everybody explicitly understands it.
+소프트웨어 아키텍처를 설명하는 데 사용하는 용어를 다양한 추상화 수준으로 자유롭게 수정하세요.
+다만 모든 사람이 명확하게 이해할 수 있도록 하세요.
 
-## Can we add more abstraction levels?
+## 추상화 레벨을 더 추가할 수 있나요?
 
-> "A database is a database; debating whether it is also a Container or a Component just isn’t worthwhile."
+> “데이터베이스는 데이터베이스일 뿐, 컨테이너인지 컴포넌트인지에 대해 논쟁하는 것은 무의미합니다.”
 
-This quote, from a [blog post](https://www.ilograph.com/blog/posts/concrete-diagramming-models/), raises a couple of interesting questions about the C4 model:
+[블로그 게시물](https://www.ilograph.com/blog/posts/concrete-diagramming-models/)에서 인용한 이 인용문은 C4 모델에 대한 몇 가지 흥미로운 질문을 제기합니다.
 
-1. Are the four levels of abstraction too limited?
-2. Can we add more levels of abstraction?
+1. 4단계의 추상화 수준이 너무 제한적이지 않나요?
+2. 추상화 수준을 더 추가할 수 있나요?
 
-Modern software systems are comprised of many different types of compile-time, runtime, deployment, and infrastructure 
-building blocks. With this in mind, it can sometimes be difficult to categorise each of these into the various 
-abstractions that make up the C4 model. A seemingly easier approach is to just add more levels of abstraction as 
-required, rather than spending time debating whether a "database" is a container or a component.
+최신 소프트웨어 시스템은 다양한 유형의 컴파일 타임, 런타임, 배포 및 인프라 빌딩 블록으로 구성되어 있습니다. 이를 염두에 두면 이러한 각 요소를 C4 모델을 구성하는 다양한 추상화로 분류하는 것이 어려울 수 있습니다. "데이터베이스"가 컨테이너인지 컴포넌트인지에 대한 논쟁에 시간을 소비하기보다는 필요에 따라 추상화 수준을 더 추가하는 것이 더 쉬운 접근 방식일 수 있습니다.
 
-The problem here is that we're often too imprecise with the terminology that we use in our day-to-day work,
-which leads us to make the wrong decisions when trying to categorise the building blocks that make up our software 
-systems. The word "database" is used in the quote above, but is it being used to refer to a 
-database server, a database schema, a collection of related data, or something else entirely?
-Why is this important? As an example, the definition of the word "database" dramatically affects the 
-meaning of the following statement:
+여기서 문제는 우리가 일상 업무에서 사용하는 용어가 너무 정확하지 않아 소프트웨어 시스템을 구성하는 빌딩 블록을 분류할 때 잘못된 결정을 내리게 되는 경우가 많다는 것입니다. 위의 인용문에서 "데이터베이스"라는 단어가 사용되었는데, 이 단어가 데이터베이스 서버, 데이터베이스 스키마, 관련 데이터 모음 또는 완전히 다른 것을 지칭하는 데 사용되고 있진 않나요?
+이것이 왜 중요한가요? 예를 들어, "데이터베이스"라는 단어의 정의는 다음 문장의 의미에 큰 영향을 미칩니다.
 
-> "microservices shouldn't share a database"
+> "마이크로서비스는 데이터베이스를 공유해서는 안 된다"
 
-As an industry, we need to be more precise with the terminology that we use. Debating whether a database is a 
-container or a component forces you understand exactly what you mean by the word "database", before mapping it 
-onto the abstraction levels provided by the C4 model. The power of the C4 model is the small set of fixed/named 
-hierarchical abstractions that help teams reason about their software systems in a structured and more precise way,
-both within and across engineering teams.
+업계에서는 우리가 사용하는 용어를 보다 정확하게 정의할 필요가 있습니다. 데이터베이스가 컨테이너인지 컴포넌트인지에 대해 토론을 통해 “데이터베이스”라는 단어가 의미하는 바를 정확히 이해한 후에 이를 C4 모델에서 제공하는 추상화 수준에 매핑할 수 있습니다. C4 모델의 강점은 엔지니어링 팀 내부와 팀 전체에서 소프트웨어 시스템에 대해 구조적이고 보다 정확한 방식으로 추론하는 데 도움이 되는 고정된/명명된 계층적 추상화의 작은 집합이라는 점입니다.
 
 ![](/images/flexible-abstractions-1.png)
 
-Whenever teams say, "C4 is too limiting - we need more abstractions for more flexibility", it's usually for one
-of the following reasons:
+팀에서 "C4는 너무 제한적이어서 유연성을 높이기 위해 더 많은 추상화가 필요하다"고 말할 때는 대개 다음과 같은 이유 중 하나일 것입니다.
 
-- The team has misunderstood the C4 model and are misusing the abstraction levels, requiring more to be added.
-- Teams want to add more abstraction levels in order to model things that are really organisational constructs or groupings, rather than abstractions in their own right - subsystems, bounded contexts, layers, libraries, etc.
+- 팀이 C4 모델을 잘못 이해하여 추상화 수준을 오용하고 있어 더 많은 추상화 수준을 추가하려고 할 때
+- 팀이 서브시스템, 경계 컨텍스트, 레이어, 라이브러리 등 자체적인 추상화가 아닌 실제 조직 구성이나 그룹을 모델링하기 위해 더 많은 추상화 수준을 추가하려고 할 때
 
-Although the C4 model provides enough for most software development teams, you should certainly feel that you can add
-more abstraction levels if you have a genuine need. After all, the agile mindset tells us to "inspect and adapt" in 
-order to improve the way that we work. This should be seen an advanced manoeuvre though, and you should only consider 
-doing it if you're willing to put the effort into precisely defining those additional levels of abstraction.
-Failure to do so will ultimately lead you back to where we are today, with diagrams showing ad hoc abstractions 
-caused by an impreciseness of terminology.
+C4 모델은 대부분의 소프트웨어 개발 팀에게 충분한 기능을 제공하지만, 정말로 필요한 경우 추상화 수준을 더 추가할 수 있다는 점을 분명히 알아야 합니다. 애자일 방식은 업무 방식을 개선하기 위해 "점검하고 적응"하라고 말합니다. 하지만 이는 매우 고차원적인 것으로 간주되어야 하며, 추가 추상화 수준을 정확하게 정의하기 위해 기꺼이 노력할 의향이 있는 경우에만 고려해야 합니다.
+그렇게 하지 않으면 결국 부정확한 용어로 인해 임시로 추상화된 다이어그램을 보여주는 현재의 상황으로 되돌아가게 됩니다.
 
 ![](/images/flexible-abstractions-2.png)

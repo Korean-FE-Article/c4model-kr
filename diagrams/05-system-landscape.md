@@ -6,38 +6,32 @@ nav_order: 5
 permalink: /diagrams/system-landscape
 ---
 
-# System landscape diagram
+# 시스템 랜드스케이프 다이어그램
 
-The system context, container, component, and code diagrams are designed to provide a static view of
-a __single software system__ but, in the real-world, software systems never live in isolation. For this reason,
-and particularly if you are responsible for a collection/portfolio of software systems,
-it's often useful to understand how all of these software systems fit together within a given enterprise, 
-organisation, department, etc. Essentially this is a map of the software systems within the chosen scope, with a
-set of system context, container, component, and code diagrams for each software system of interest.
+시스템 컨텍스트, 컨테이너, 컴포넌트 및 코드 다이어그램은 **단일 소프트웨어 시스템**의 정적 뷰를 제공하도록 설계되었습니다. 하지만, 실제 환경에서 소프트웨어 시스템은 결코 고립되어 존재하지 않습니다. 이러한 이유로, 특히 여러 소프트웨어 시스템 포트폴리오를 담당할 때는, 이 시스템들이 기업이나 조직 내에서 어떻게 연결되는지 이해하면 도움이 됩니다. 본질적으로 이것은 선택된 범위 내의 소프트웨어 시스템 지도이며, 관심 있는 각 소프트웨어 시스템에 대한 시스템 컨텍스트, 컨테이너, 컴포넌트 및 코드 다이어그램이 함께 구성됩니다.
 
-From a practical perspective, a system landscape diagram is really just a system context diagram without a
-specific focus on a particular software system.
+실용적인 관점에서 시스템 랜드스케이프 다이어그램은 특정 소프트웨어 시스템에 초점을 맞추지 않은 시스템 컨텍스트 다이어그램과 매우 유사합니다.
 
-## Example
+## 예시
 
-[![A system landscape diagram](https://static.structurizr.com/workspace/28201/diagrams/SystemLandscape.png)](https://static.structurizr.com/workspace/28201/diagrams/SystemLandscape.png)
+[![시스템 랜드스케이프 다이어그램](https://static.structurizr.com/workspace/28201/diagrams/SystemLandscape.png)](https://static.structurizr.com/workspace/28201/diagrams/SystemLandscape.png)
 
-### Diagram key
+### 다이어그램 키
 
-[![A diagram key](https://static.structurizr.com/workspace/28201/diagrams/SystemLandscape-key.png)](https://static.structurizr.com/workspace/28201/diagrams/SystemLandscape-key.png)
+[![다이어그램 키](https://static.structurizr.com/workspace/28201/diagrams/SystemLandscape-key.png)](https://static.structurizr.com/workspace/28201/diagrams/SystemLandscape-key.png)
 
-## Scope
+## 범위
 
-An enterprise/organisation/department/etc.
+기업, 조직 또는 부서 등을 포함합니다.
 
-## Primary elements
+## 주요 요소
 
-People and software systems related to the chosen scope.
+선택된 범위와 관련된 사람들과 소프트웨어 시스템입니다.
 
-## Intended audience
+## 대상 독자
 
-Technical and non-technical people, inside and outside the software development team.
+소프트웨어 개발팀 내부 및 외부의 개발자, 비개발자를 포함합니다.
 
-## Recommended?
+## 추천하시나요?
 
-Yes, particularly for larger organisations - it's a bridge into the enterprise architecture world.
+네, 특히 대규모 조직에서는 기업 아키텍처 세계로 연결되는 다리 역할을 합니다.

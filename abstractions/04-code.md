@@ -6,7 +6,6 @@ nav_order: 4
 permalink: /abstractions/code
 ---
 
-# Code
+# 코드
 
-Finally, components are made up of one or more code elements constructed with the basic building blocks
-of the programming language that you're using - classes, interfaces, enums, functions, objects, etc.
+마지막으로 컴포넌트는 사용 중인 프로그래밍 언어의 기본 구성 요소(클래스, 인터페이스, 열거형, 함수, 객체 등)로 작성된 하나 이상의 코드 요소로 이루어집니다.

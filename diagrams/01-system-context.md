@@ -6,45 +6,39 @@ nav_order: 1
 permalink: /diagrams/system-context
 ---
 
-# System context diagram
+# 시스템 컨텍스트 다이어그램
 
-A System Context diagram is a good starting point for diagramming and documenting a software system, allowing you to
-step back and see the big picture. Draw a diagram showing your system as a box in the centre, surrounded by its users
-and the other systems that it interacts with.
+시스템 컨텍스트 다이어그램은 소프트웨어 시스템을 도식화하고 문서화하기 위한 좋은 시작점이며, 한 걸음 물러서서 전체적인 그림을 볼 수 있게 합니다. 시스템을 중앙에 박스로 표시하고, 그 주변에 시스템과 상호작용을 하는 다른 사용자 및 시스템을 보여주는 다이어그램을 그립니다.
 
-Detail isn't important here as this is your zoomed out view showing a big picture of the system landscape. The focus
-should be on people (actors, roles, personas, etc) and software systems rather than technologies, protocols and other
-low-level details. It's the sort of diagram that you could show to non-technical people.
+이 부분은 전체적인 시스템 환경을 보여주는 것이 목적이므로 세부 내용은 중요하지 않습니다. 기술적 세부 사항보다는 사람(액터, 역할, 페르소나 등)과 소프트웨어 시스템에 중점을 둡니다. 이런 다이어그램은 비 개발자들도 이해하기 쉽습니다.
 
-## Example
+## 예시
 
 [![A System Context diagram](https://static.structurizr.com/workspace/36141/diagrams/SystemContext.png)](https://static.structurizr.com/workspace/36141/diagrams/SystemContext.png)
 
-### Diagram key
+### 다이어그램 키
 
 [![A diagram key](https://static.structurizr.com/workspace/36141/diagrams/SystemContext-key.png)](https://static.structurizr.com/workspace/36141/diagrams/SystemContext-key.png)
 
-## Scope
+## 범위
 
-A single software system.
+단일 소프트웨어 시스템입니다.
 
-## Primary elements
+## 주요 요소
 
-The software system in scope.
+범위 내의 소프트웨어 시스템입니다.
 
-## Supporting elements
+## 지원 요소
 
-People (e.g. users, actors, roles, or personas) and software systems (external dependencies) that are directly connected
-to the software system in scope. Typically these other software systems sit outside the scope or boundary of your
-own software system, and you don't have responsibility or ownership of them.
+범위 내 소프트웨어 시스템과 직접 연결된 사람(예: 사용자, 액터, 역할 또는 페르소나)과 소프트웨어 시스템(외부 종속성)입니다. 일반적으로 이러한 다른 소프트웨어 시스템은 자체 소프트웨어 시스템의 범위나 경계 밖에 있으며, 귀하는 이에 대한 책임이나 소유권이 없습니다.
 
-## Intended audience
+## 대상 독자
 
-Everybody, both technical and non-technical people, inside and outside the software development team.
+소프트웨어 개발팀 내부와 외부의 모든 사람으로, 개발자와 비 개발자 모두를 포함합니다.
 
-## Recommended?
+## 추천하시나요?
 
-Yes, a system context diagram is recommended for all software development teams.
+네, 시스템 컨텍스트 다이어그램은 모든 소프트웨어 개발팀에게 권장됩니다.
 
 <script type="application/javascript" src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
 <script type="application/javascript" src="/assets/c4model.js"></script>

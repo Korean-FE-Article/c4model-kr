@@ -6,96 +6,75 @@ nav_order: 3
 permalink: /abstractions/component
 ---
 
-# Component
+# 컴포넌트
 
-The word "component" is a hugely overloaded term in the software development industry but, in the C4 model,
-a component is a grouping of related functionality encapsulated behind a well-defined interface.
-If you're using a language like Java or C#, the simplest way to think of a component is that it's a collection
-of implementation classes behind an interface.
+"컴포넌트"라는 단어는 소프트웨어 개발 업계에서 엄청나게 많이 사용되는 용어입니다. 하지만, C4 모델에서 컴포넌트는 잘 정의된 인터페이스 뒤에 캡슐화된 관련 기능들의 그룹을 의미합니다.
+Java나 C#과 같은 언어를 사용하고 있다면, 컴포넌트를 생각하는 가장 간단한 방법은 인터페이스 뒤에 있는 구현 클래스들의 모음이라고 생각하는 것입니다.
 
-With the C4 model, components are *not* separately deployable units. Instead, it's the container that's the
-deployable unit. In other words, all components inside a container execute in the same process space.
-Aspects such as how components are packaged (e.g. one component vs many components per JAR file, DLL,
-shared library, etc) is an orthogonal concern.
+C4 모델에서 컴포넌트는 별도로 배포할 수 있는 단위가 _아닙니다_. 배포할 수 있는 단위는 컨테이너입니다.
+다시 말해, 컨테이너 내의 모든 컴포넌트는 동일한 프로세스 공간에서 실행됩니다. 컴포넌트가 어떻게 패키징되는지(예: JAR 파일, DLL, 공유 라이브러리 등에 하나의 컴포넌트 vs 여러 컴포넌트)와 같은 측면은 별개의 문제입니다.
 
-## Components vs code?
+## 컴포넌트 vs 코드?
 
-A component is a way to step up one level of abstraction from the code-level building blocks that you have in the
-programming language that you're using. For example:
+컴포넌트는 사용 중인 프로그래밍 언어의 코드 수준 구성 요소에서 한 단계 위로 추상화하는 방법입니다. 예를 들면,
 
-- __Object-oriented programming languages (e.g. Java, C#, C++, etc)__: A component is made up of classes and interfaces.
-- __Procedural programming languages (e.g. C)__: A component could be made up of a number of C files in a particular directory.
-- __JavaScript__: A component could be a JavaScript module, which is made up of a number of objects and functions.
-- __Functional programming languages__: A component could be a module (a concept supported by languages such as F#, Haskell, etc), which is a logical grouping of related functions, types, etc.
+- **객체 지향 프로그래밍 언어(예: Java, C#, C++ 등)**: 컴포넌트는 클래스와 인터페이스로 구성됩니다.
+- **절차적 프로그래밍 언어(예: C)**: 컴포넌트는 특정 디렉터리에 있는 여러 C 파일로 구성될 수 있습니다.
+- **자바스크립트**: 컴포넌트는 여러 객체와 함수로 구성된 자바스크립트 모듈일 수 있습니다.
+- **함수형 프로그래밍 언어**: 컴포넌트는 연관된 함수, 타입 등의 논리적 그룹인 모듈(F#, Haskell 등과 같은 언어에서 지원하는 개념)일 수 있습니다.
 
-If you're using an object-oriented programming language, your components will be implemented using one or more classes.
-Let's look at a quick example to better define what a component is in the context of some code.
+객체 지향 프로그래밍 언어를 사용하고 있다면, 컴포넌트는 하나 이상의 클래스를 사용하여 구현됩니다. 코드 맥락에서 컴포넌트가 무엇인지 더 잘 정의하기 위해 간단한 예를 살펴보겠습니다.
 
-The [Spring PetClinic](https://github.com/spring-projects/spring-petclinic) application is a sample
-codebase that illustrates how to build a Java web application using the Spring MVC framework.
-From a non-technical perspective, it's a software system designed for an imaginary pet clinic that stores information
-about pets and their owners, visits made to the clinic, and the vets who work there. The system is only designed to
-be used by employees of the clinic. From a technical perspective, the Spring PetClinic system consists of a web
-application and a relational database schema.
+[스프링 펫 클리닉(Spring PetClinic)](https://github.com/spring-projects/spring-petclinic)은 Spring MVC 프레임워크를 사용하여 자바 웹 애플리케이션을 구축하는 방법을 보여주는 샘플 코드 베이스입니다.
+비기술적 관점에서 보면, 이 시스템은 가상의 동물 병원에서 반려동물과 주인들의 정보, 병원 방문 기록, 그리고 근무 중인 수의사들에 대한 데이터를 관리하기 위해 만들어진 소프트웨어 시스템입니다.
+이 시스템은 클리닉 직원들만 사용하도록 설계되었습니다. 기술적 관점에서 보면, 스프링 펫클리닉 시스템은 웹 애플리케이션과 관계형 데이터베이스 스키마로 구성됩니다.
 
-The version<sup>1</sup> of the web application we'll look at here is a typical layered architecture consisting of a number of
-web MVC controllers, a service containing "business logic" and some repositories for data access. There are also
-some domain and util classes too. If you download a copy of the GitHub repository<sup>2</sup>, open it in your IDE of choice
-and visualise it by reverse-engineering a UML class diagram from the code, you'll get something like this.
+여기서 살펴볼 웹 애플리케이션 버전<sup>1</sup>은 웹 MVC 컨트롤러, "비즈니스 로직"이 포함된 서비스, 그리고 데이터 액세스를 위한 레포지토리로 구성된 전형적인 계층화된 아키텍처입니다. 도메인 및 유틸 클래스도 있습니다.
+깃헙 저장소<sup>2</sup>의 복사본을 다운로드하고, 선호하는 IDE에서 열어 코드로부터 UML 클래스 다이어그램을 리버스 엔지니어링해 시각화하면, 다음과 같은 결과를 얻을 수 있습니다.
 
-[![](/images/components-vs-classes-1.png)](/images/components-vs-classes-1.png)
+[![](../images/components-vs-classes-1.png)](../images/components-vs-classes-1.png)
 
-As you would expect, this diagram is showing you all the Java classes and interfaces that make up the Spring
-PetClinic web application, plus all the relationships between them. The properties and methods are hidden on
-the diagram because they add too much noise to the picture. This isn't a complex codebase by any stretch of the
-imagination but, by showing classes and interfaces, the diagram is showing too much detail.
+예상하셨겠지만, 이 다이어그램은 스프링 펫 클리닉 웹 애플리케이션을 구성하는 모든 자바 클래스와 인터페이스, 그리고 그들 사이의 모든 관계를 보여줍니다.
+프로퍼티와 메서드는 그림에 너무 많은 복잡성을 추가하기 때문에 다이어그램에서 숨겨져 있습니다.
+이 코드 베이스는 전혀 복잡하지 않지만, 클래스와 인터페이스를 모두 보여줌으로써 다이어그램이 너무 많은 세부 정보를 표시하고 있습니다.
 
-Let's remove those classes that aren't useful to having an "architecture" discussion about the system.
-In other words, let's only show those classes/interfaces that have some significance from a static structure
-perspective. In concrete terms, for this specific codebase, it means excluding the model/domain classes
-(they are just data structures) and util classes.
+시스템에 대한 "아키텍처" 논의에 있어 유용하지 않은 클래스들을 제거해 봅시다.
+다시 말해, 정적 구조 관점에서 중요한 클래스/인터페이스만 표시해 보겠습니다.
+구체적으로는, 이 특정 코드 베이스에서는 (단순 데이터 구조인) 모델/도메인 클래스와 유틸 클래스를 제외하는 것을 의미합니다.
 
-[![](/images/components-vs-classes-2.png)](/images/components-vs-classes-2.png)
+[![](/images/components-vs-classes-2.png)](../images/components-vs-classes-2.png)
 
-After a little rearranging, we now have a simpler diagram with which to reason about the software architecture.
-We can also see the architectural layers again (controllers, services and repositories). But this diagram is still
-showing _code-level elements_ (i.e. classes and interfaces). In order to zoom up one level, we need to identify which
-of these code-level elements can be grouped together to form "components". The strategy for grouping code-level elements
-into components will vary from codebase to codebase but, for this codebase,
-the strategy might look like this.
+약간의 재배치 후, 이제 소프트웨어 아키텍처에 대해 논의하기 위한 더 간단한 다이어그램을 갖게 되었습니다.
+또한 아키텍처 계층(컨트롤러, 서비스 및 저장소)도 다시 볼 수 있습니다.
+하지만, 이 다이어그램은 여전히 _코드 수준 요소_(즉, 클래스와 인터페이스)를 보여주고 있습니다.
+한 단계 위로 확대하기 위해서는, 이러한 코드 수준 요소 중 어떤 것들이 함께 그룹화되어 "컴포넌트"를 형성할 수 있는지 파악해야 합니다.
+코드 수준 요소를 컴포넌트로 그룹화하는 전략은 코드 베이스마다 다를 수 있지만, 이 코드 베이스의 경우 전략은 다음과 같을 수 있습니다.
 
-[![](/images/components-vs-classes-3.png)](/images/components-vs-classes-3.png)
+[![](../images/components-vs-classes-3.png)](../images/components-vs-classes-3.png)
 
-Each of the blue boxes represents a "component" in this codebase. In summary, each of the
-web controllers is a separate component, along with the result of combining the remaining interfaces and their
-implementation classes. If we remove the code level noise, we get a picture like this.
+파란색 상자들은 각각 이 코드 베이스의 "컴포넌트"를 나타냅니다.
+요약하자면, 각 웹 컨트롤러는 별도의 컴포넌트이며, 나머지 인터페이스와 그 구현 클래스들을 결합한 결과도 컴포넌트입니다.
+코드 수준의 복잡성을 제거하면, 이와 같은 그림을 얻게 됩니다.
 
-[![](/images/components-vs-classes-4.png)](/images/components-vs-classes-4.png)
+[![](../images/components-vs-classes-4.png)](../images/components-vs-classes-4.png)
 
-In essence, we're grouping the classes and interfaces into components to form units of related functionality.
-You will likely have shared code (e.g. abstract base classes, supporting classes, helper classes, utility classes, etc)
-that are used across many components, such as the ```JdbcPetVisitExtractor``` in this example. Some can be refactored
-and moved "inside" a particular component, but some of them are inevitable.
+본질적으로, 우리는 연관된 기능의 단위를 형성하기 위해 클래스와 인터페이스를 컴포넌트로 그룹화하고 있습니다.
+예시의 `JdbcPetVisitExtractor`처럼 많은 컴포넌트에서 사용되는 공유 코드(예: 추상 기본 클래스, 지원 클래스, 헬퍼 클래스, 유틸리티 클래스 등)가 있을 것입니다.
+일부는 리팩토링하여 특정 컴포넌트 "내부"로 옮길 수 있지만, 일부는 불가피하게 공유될 수밖에 없습니다.
 
-Although this example illustrates a traditional layered architecture, the same principles are applicable regardless of
-how you package your code (e.g. by layer, feature or component) or the architectural style in use (e.g. layered,
-hexagonal, ports and adapters, etc). If your codebase is small enough, you can go through this process manually.
-For larger codebases though, you'll likely want to consider automatic generation of component diagrams by
-reverse-engineering your codebase ([example](https://github.com/structurizr/java/blob/master/structurizr-dsl/src/test/resources/dsl/spring-petclinic/workspace.dsl)).
+이 예시는 전통적인 계층형 아키텍처를 보여주지만, 같은 원칙은 코드를 어떻게 패키징하든(예: 계층별, 기능별, 컴포넌트별) 또는 사용 중인 아키텍처 스타일에 관계없이(예: 계층형, 헥사고날, 포트 및 어댑터 등) 적용 가능합니다.
+코드 베이스가 충분히 작다면, 이 과정을 수동으로 진행할 수 있습니다. 하지만 더 큰 코드 베이스의 경우, 코드 베이스를 리버스 엔지니어링하여 컴포넌트 다이어그램을 자동으로 생성하는 것을 고려해야 할 것입니다([예시](https://github.com/structurizr/java/blob/master/structurizr-dsl/src/test/resources/dsl/spring-petclinic/workspace.dsl))
 
-- <sup>1</sup> the diagrams shown here do not reflect the latest version of the Spring PetClinic, but are sufficient for the discussion
-- <sup>2</sup> `git checkout 95de1d9f8bf63560915331664b27a4a75ce1f1f6` is the version these diagrams were based upon
+- <sup>1</sup> 여기에 표시된 다이어그램은 최신 버전의 스프링 펫클리닉을 반영하지 않지만, 논의하기에는 충분합니다.
+- <sup>2</sup> `git checkout 95de1d9f8bf63560915331664b27a4a75ce1f1f6`는 이 다이어그램이 기반으로 한 버전입니다.
 
 ## FAQ
 
-### Is a Java JAR, C# assembly, DLL, module, package, namespace, folder etc a component?
+### Java JAR, C# 어셈블리, DLL, 모듈, 패키지, 네임스페이스, 폴더 등이 컴포넌트인가요?
 
-Perhaps but, again, typically not. The C4 model is about showing the runtime units (containers) and how
-functionality is partitioned across them (components), rather than organisational units such as Java JAR files,
-C# assemblies, DLLs, modules, packages, namespaces or folder structures.
+그럴 수도 있지만, 일반적으로는 그렇지 않습니다.
+C4 모델은 런타임 단위(컨테이너)와 기능이 이들 사이에 어떻게 분할되는지(컴포넌트)를 보여주는 것이지, Java JAR 파일, C# 어셈블리, DLL, 모듈, 패키지, 네임스페이스 또는 폴더 구조와 같은 조직적 단위를 보여주는 것이 아닙니다.
 
-Of course, there may be a one-to-one mapping between these constructs and a component; e.g. if you're building
-a hexagonal architecture, you may create a single Java JAR file or C# assembly per component. On the other hand,
-a single component might be implemented using code from a number of JAR files, which is typically what happens
-when you start to consider third-party frameworks/libraries, and how they become embedded in your codebase.
-
+물론, 이러한 구조와 컴포넌트 사이에 일대일 매핑이 있을 수 있습니다.
+예를 들어, 헥사고날 아키텍처를 구축하는 경우, 컴포넌트당 하나의 Java JAR 파일이나 C# 어셈블리를 만들 수 있습니다.
+반면에, 하나의 컴포넌트가 여러 JAR 파일의 코드를 사용하여 구현될 수도 있는데, 이는 서드파티 프레임워크/라이브러리를 고려하고 그것들이 코드 베이스에 어떻게 포함되는지 생각하기 시작할 때 일반적으로 발생하는 일입니다.

@@ -6,20 +6,15 @@ nav_order: 1
 permalink: /abstractions/software-system
 ---
 
-# Software system
+# 소프트웨어 시스템
 
-A software system is the highest level of abstraction and describes something that delivers value to its users,
-whether they are human or not. This includes the software system you are modelling, and the other software systems
-upon which your software system depends (or vice versa).
+소프트웨어 시스템은 가장 높은 수준의 추상화이며, (사람인지 아닌지 관계없이)사용자에게 가치를 전달하는 무언가를 설명합니다.
+여기에는 여러분이 모델링하고 있는 소프트웨어 시스템과 소프트웨어 시스템이 의존하는(또는 그 반대로 의존 받는) 다른 소프트웨어 시스템들이 포함됩니다.
 
-Unfortunately the term "software system" is the hardest of the C4 model abstractions to define, and this isn't helped
-by the fact that each organisation will also have their own terminology for describing the same thing, typically using
-terms such as "application", "product", "service", etc. One way to think about it is that a software system is
-something a single software development team is building, owns, has responsibility for, and can see the internal
-implementation details of. Perhaps the code for that software system resides in a single source code repository,
-and anybody on the team is entitled to modify it. In many cases, the boundary of a software system will correspond to
-the boundary of a single team. It may also be the case that everything inside the boundary of a software system is
-deployed at the same time.
+안타깝게도 "소프트웨어 시스템"이라는 용어는 C4 모델 추상화 중에 정의하기 가장 어려운 것입니다.
+조직마다 같은 것을 설명하는데 "애플리케이션", "제품", "서비스" 등과 같은 자체 용어를 사용한다는 점이 이 정의를 더 어렵게 만듭니다.
+소프트웨어 시스템을 생각하는 한 가지 방법은, 단일 소프트웨어 개발팀이 구축하고, 소유하며, 책임을 지고, 내부 구현 세부 사항을 볼 수 있는 것으로 생각하는 것입니다.
+아마도 그 소프트웨어 시스템의 코드는 단일 소스 코드 저장소에 있을 것이고, 팀 내 누구나 이를 수정할 권한이 있을 것입니다.
+많은 경우, 소프트웨어 시스템의 경계는 단일팀의 경계와 일치할 것입니다. 또한 소프트웨어 시스템 경계 내의 모든 요소가 동시에 배포되는 경우도 종종 있습니다.
 
-Things that are not usually software systems in the C4 model include product domains, bounded contexts,
-business capabilities, feature teams, tribes, or squads.
+C4 모델에서 일반적으로 소프트웨어 시스템이 아닌 것들에는 제품 도메인, 경계 컨텍스트(bounded contexts), 비즈니스 기능, 피처 팀, 트라이브, 또는 스쿼드 등이 있습니다.

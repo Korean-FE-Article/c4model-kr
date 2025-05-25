@@ -6,67 +6,52 @@ nav_order: 2
 permalink: /abstractions/container
 ---
 
-# Container
+# 컨테이너
 
-Not Docker! In the C4 model, a container represents an __application__ or a __data store__. A container is something
-that needs to be running in order for the overall software system to work. In real terms, a container is something like:
+여기서 말하는 컨테이너 개념은 도커에서 나온 게 아닙니다! C4 모델에서 컨테이너는 **애플리케이션** 또는 **데이터 저장소**를 나타냅니다.
+컨테이너는 전체 소프트웨어 시스템이 작동하기 위해 실행되어야 하는 무언가입니다. 실질적으로, 컨테이너는 아래 항목에 적혀있는 것이 해당됩니다.
 
-- __Server-side web application__: A Java EE web application running on Apache Tomcat, an ASP.NET MVC application running on Microsoft IIS, a Ruby on Rails application running on WEBrick, a Node.js application, etc.
-- __Client-side web application__: A JavaScript application running in a web browser using Angular, Backbone.JS, jQuery, etc.
-- __Client-side desktop application__: A Windows desktop application written using WPF, an OS X desktop application written using Objective-C, a cross-platform desktop application written using JavaFX, etc.
-- __Mobile app__: An Apple iOS app, an Android app, a Microsoft Windows Phone app, etc.
-- __Server-side console application__: A standalone (e.g. "public static void main") application, a batch process, etc.
-- __Serverless function__: A single serverless function (e.g. Amazon Lambda, Azure Function, etc).
-- __Database__: A schema or database in a relational database management system, document store, graph database, etc such as MySQL, Microsoft SQL Server, Oracle Database, MongoDB, Riak, Cassandra, Neo4j, etc.
-- __Blob or content store__: A blob store (e.g. Amazon S3, Microsoft Azure Blob Storage, etc) or content delivery network (e.g. Akamai, Amazon CloudFront, etc).
-- __File system__: A full local file system or a portion of a larger networked file system (e.g. SAN, NAS, etc).
-- __Shell script__: A single shell script written in Bash, etc.
-- etc
+- **서버 측 웹 애플리케이션**: Apache Tomcat에서 실행되는 Java EE 웹 애플리케이션, Microsoft IIS에서 실행되는 ASP.NET MVC 애플리케이션, WEBrick에서 실행되는 Ruby on Rails 애플리케이션, Node.js 애플리케이션 등.
+- **클라이언트 측 웹 애플리케이션**: Angular, Backbone.JS, jQuery 등을 사용하여 웹 브라우저에서 실행되는 자바스크립트 애플리케이션.
+- **클라이언트 측 데스크톱 애플리케이션**: WPF로 작성된 Windows 데스크톱 애플리케이션, Objective-C로 작성된 OS X 데스크톱 애플리케이션, JavaFX로 작성된 크로스 플랫폼 데스크톱 애플리케이션 등.
+- **모바일 앱**: Apple iOS 앱, Android 앱, Microsoft Windows Phone 앱 등.
+- **서버 측 콘솔 애플리케이션**: 독립 실행형(예: "public static void main") 애플리케이션, 배치 프로세스 등.
+- **서버리스 함수**: 단일 서버리스 함수(예: Amazon Lambda, Azure Function 등).
+- **데이터베이스**: MySQL, Microsoft SQL Server, Oracle Database, MongoDB, Riak, Cassandra, Neo4j 등과 같은 관계형 데이터베이스 관리 시스템, 문서 저장소, 그래프 데이터베이스 등의 스키마 또는 데이터베이스.
+- **Blob 또는 콘텐츠 저장소**: Blob 저장소(예: Amazon S3, Microsoft Azure Blob Storage 등) 또는 콘텐츠 전송 네트워크(예: Akamai, Amazon CloudFront 등).
+- **파일 시스템**: 전체 로컬 파일 시스템 또는 더 큰 네트워크 파일 시스템(예: SAN, NAS 등)의 일부.
+- **셸 스크립트**: Bash 등으로 작성된 단일 셸 스크립트.
+- 등등
 
-A container is essentially a runtime boundary around some code that is being executed or some data that is being stored.
-The name "container" was chosen because I wanted a name that didn't imply anything about the physical nature of how
-that container is executed. For example, a single Java EE server like Apache Tomcat can run multiple web
-applications inside a single Java Virtual Machine, although each of those web applications is essentially isolated
-from the others. At development time I might have three web applications running on a single Apache Tomcat server,
-while each web application may be deployed onto a dedicated Apache Tomcat server in a live environment.
-In this situation, each web application is a "C4 container", with the deployment being a seperate concern.
+컨테이너는 본질적으로 실행 중인 코드나 저장 중인 데이터 주위의 런타임 경계입니다.
+"컨테이너"라는 이름은 그 컨테이너가 어떻게 실행되는지에 대한 물리적 특성에 대해 아무것도 암시하지 않는 이름을 원했기 때문에 선택되었습니다.
+예를 들어, Apache Tomcat과 같은 단일 Java EE 서버는 단일 Java 가상 머신 내에서 여러 웹 애플리케이션을 실행할 수 있지만, 각 웹 애플리케이션은 본질적으로 다른 애플리케이션과 격리되어 있습니다.
+개발 시에는 단일 Apache Tomcat 서버에서 세 개의 웹 애플리케이션을 실행할 수 있지만, 라이브 환경에서는 각 웹 애플리케이션이 전용 Apache Tomcat 서버에 배포될 수 있습니다.
+이 상황에서 각 웹 애플리케이션은 "C4 컨테이너"이며, 배포는 별도의 문제입니다.
 
 ## FAQ
 
-### Why "container"?
+### 왜 "컨테이너"인가요?
 
-Terms like "process", "application", "app", "server", "deployable unit", etc all have associated implications, so the
-name "container" was chosen as a generic way to describe something in which components live. From one perspective,
-it's unfortunate that containerisation has become popular, because many software developers now associate the term
-"container" with Docker. From another perspective though, there is sometimes a nice parity between a container in the
-C4 model and an infrastructure (e.g. Docker) container.
+"프로세스", "애플리케이션", "앱", "서버", "배포할 수 있는 단위" 등과 같은 용어는 모두 연관된 의미를 이미 가지고 있습니다.
+하지만, "컨테이너"라는 이름은 컴포넌트들이 담기는 무언가를 설명하기 위한 일반적인 표현이기 때문에 선택했습니다.
+한편으로는, 컨테이너화 기술이 인기를 얻으면서 많은 소프트웨어 개발자들이 "컨테이너"라는 용어를 도커와 연결 짓게 된 것이 아쉽습니다. 그러나 다른 한편으로는, C4 모델의 컨테이너와 인프라(예: 도커) 컨테이너 사이에 실제로 유용한 유사점들이 존재하기도 합니다.
 
-While many teams successfully use the C4 model as is, feel free to change the terminology if needed.
+### 웹 애플리케이션은 단일 컨테이너일까요? 두 개일까요?
 
-### Web applications; one container or two?
+주로 정적 HTML 콘텐츠를 생성하는 서버 측 웹 애플리케이션(예: Spring MVC, ASP.NET, Ruby on Rails, Django 등)을 구축하는 경우, 그것은 단일 컨테이너입니다.
+서버 측 웹 애플리케이션에서 상당한 양의 자바스크립트가 제공되는 경우(예: Angular를 사용하여 구축된 단일 페이지 애플리케이션), 그것은 두 개의 컨테이너입니다.
+배포 시에 서버 측 웹 애플리케이션이 서버 측 및 클라이언트 측 코드를 모두 포함하지만, 클라이언트와 서버를 두 개의 별도 컨테이너로 취급하면 이들이 프로세스 간/원격 통신 메커니즘(예: JSON/HTTPS)을 통해 통신하는 두 개의 별도 프로세스 공간임이 명시적으로 표현됩니다.
+또한 각 컨테이너를 별도로 확대하여 그 안의 컴포넌트를 보여주는 기반을 제공합니다.
 
-If you're building a server-side web application (e.g. Spring MVC, ASP.NET, Ruby on Rails, Django, etc) that is
-predominantly generating static HTML content, then that's a single container. If there's a significant quantity of
-JavaScript being delivered by the server-side web application (e.g. a single-page application built using Angular),
-then that's two containers.
+### Java JAR, C# 어셈블리, DLL, 모듈 등이 컨테이너인가요?
 
-Although, at deployment time, the server-side web application includes both the server-side and client-side code,
-treating the client and server as two separate containers makes it explicit that these are two separate process spaces,
-communicating via an inter-process/remote communication mechanism (e.g. JSON/HTTPS). It also provides a basis for
-zooming in to each container separately to show the components inside them.
+일반적으로 그렇지 않습니다. 컨테이너는 애플리케이션과 같은 런타임 구성입니다. 반면 Java JAR 파일, C# 어셈블리, DLL, 모듈 등은 해당 애플리케이션 내의 코드를 구성하는 데 사용됩니다.
 
-### Is a Java JAR, C# assembly, DLL, module, etc a container?
+## 데이터 저장 서비스를 소프트웨어 시스템으로 표시해야 하나요? 아니면 컨테이너로 표시해야 하나요?
 
-Typically not. A container is a runtime construct, like an application; whereas Java JAR files, C# assemblies,
-DLLs, modules, etc are used to organise the code within those applications.
+Amazon S3, Amazon RDS, Azure SQL Database, 콘텐츠 전송 네트워크 등과 같은 서비스를 소프트웨어 시스템 또는 컨테이너로 표시해야 하는지 여부에 대해 자주 질문합니다.
+결국, 이들은 대다수가 직접 소유하거나 운영하지 않는 외부 서비스입니다.
 
-### Should data storage services be shown as software systems or containers?
-
-A frequently asked question is whether services like Amazon S3, Amazon RDS, Azure SQL Database, content delivery
-networks, etc should be shown as software systems or containers. After all, these are external services that most
-of us don't own or run ourselves.
-
-If you're building a software system that is using Amazon S3 for storing data, it's true that you don't run S3 yourself,
-but you do have ownership and responsibility for the buckets you are using. Similarly with Amazon RDS, you have
-(more or less) complete control over any database schemas that you create. For this reason, treat them as containers
-because they are an integral part of your software architecture, although they are hosted elsewhere.
+데이터를 저장하기 위해 Amazon S3를 사용하는 소프트웨어 시스템을 구축하는 경우, S3를 직접 실행하는 것은 아니지만, 사용 중인 버킷에 대한 소유권과 책임은 있습니다.
+유사하게, Amazon RDS의 경우에도 생성하는 데이터베이스 스키마에 대해 (거의) 완전한 제어권을 가지고 있습니다. 이러한 이유로, 이들은 다른 곳에서 호스팅 되지만 소프트웨어 아키텍처의 필수적인 부분이므로 컨테이너로 취급합니다.
