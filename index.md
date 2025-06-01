@@ -10,10 +10,10 @@ permalink: /
 
 C4 모델은 다음과 같습니다.
 
-1. [계층적 추상화(hierarchical abstractions, 소프트웨어 시스템, 컨테이너, 컴포넌트 및 코드)](<(/abstractions)>)의 집합입니다.
-2. [계층적 다이어그램(hierarchical diagrams, 시스템 컨텍스트, 컨테이너, 구성 요소 및 코드)](<(/diagrams)>)의 집합입니다.
-3. [표기법에 독립적](/diagrams/notation)입니다.
-4. [도구에 독립적](/tooling)입니다.
+1. [계층적 추상화(hierarchical abstractions, 소프트웨어 시스템, 컨테이너, 컴포넌트 및 코드)](<({{ site.baseurl }}/abstractions)>)의 집합입니다.
+2. [계층적 다이어그램(hierarchical diagrams, 시스템 컨텍스트, 컨테이너, 구성 요소 및 코드)](<({{ site.baseurl }}/diagrams)>)의 집합입니다.
+3. [표기법에 독립적]({{ site.baseurl }}/diagrams/notation)입니다.
+4. [도구에 독립적]({{ site.baseurl }}/tooling)입니다.
 
 [![소프트웨어 아키텍처 시각화를 위한 C4 모델 개요]({{ site.baseurl }}/images/c4-overview.png)]({{ site.baseurl }}/images/c4-overview.png)
 

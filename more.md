@@ -47,7 +47,7 @@ Recorded at "Agile on the Beach 2019", July 2019
 Simon has personally taught the C4 model to 10,000+ people in 30+ countries;
 with conference talks, videos, books, and articles reaching many more than this.
 Other people are also teaching, speaking, and writing about the C4 model,
-plus it's been [integrated into a number of tools](/tooling).
+plus it's been [integrated into a number of tools]({{ site.baseurl }}/tooling).
 Here are some case studies:
 
 - Spotify: [Spotify Engineering: Software Visualization - Challenge, Accepted](https://engineering.atspotify.com/2022/07/software-visualization-challenge-accepted/)
