@@ -9,11 +9,11 @@ permalink: /more
 
 ## Books
 
-This is Simon Brown's [The C4 model for visualising software architecture](https://leanpub.com/visualising-software-architecture) 
+This is Simon Brown's [The C4 model for visualising software architecture](https://leanpub.com/visualising-software-architecture)
 ebook, which is available to purchase from Leanpub in PDF, EPUB and MOBI formats.
 It forms the basis for his [workshop](https://simonbrown.je#workshop3) and includes a number of more advanced C4 model topics.
 
-[![The C4 model for visualising software architecture book](/images/book-small.png)](https://leanpub.com/visualising-software-architecture)
+[![The C4 model for visualising software architecture book](../images/book-small.png)](https://leanpub.com/visualising-software-architecture)
 
 It is also referenced in the following books:
 
@@ -62,8 +62,8 @@ And here are some other resources that reference the C4 model:
 - [Wikipedia](https://en.wikipedia.org/wiki/C4_model)
 - [InfoQ: The C4 model for software architecture](https://www.infoq.com/articles/C4-architecture-model)
 - [InfoQ: O modelo C4 de documentação para Arquitetura de Software](https://www.infoq.com/br/articles/C4-architecture-model)
-- [InfoQ: 用于软件架构的C4模型](https://www.infoq.com/cn/articles/C4-architecture-model)
-- [InfoQ: ソフトウェアアーキテクチャのためのC4モデル](https://www.infoq.com/jp/articles/C4-architecture-model)
+- [InfoQ: 用于软件架构的 C4 模型](https://www.infoq.com/cn/articles/C4-architecture-model)
+- [InfoQ: ソフトウェアアーキテクチャのための C4 モデル](https://www.infoq.com/jp/articles/C4-architecture-model)
 - [Open Agile Architecture™, a Standard of The Open Group](https://publications.opengroup.org/c208)
 - [Agile Architecture Modeling using the ArchiMate® Language](https://publications.opengroup.org/g20e)
 - [Martin Fowler: Building Infrastructure Platforms - Communicate your technical vision](https://martinfowler.com/articles/building-infrastructure-platform.html#CommunicateYourTechnicalVision) (Poppy Rowse and Chris Shepherd)

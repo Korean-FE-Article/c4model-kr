@@ -36,27 +36,27 @@ In summary, you can think of the C4 model as a simplified version of the underly
 ## Isn't the C4 model a step backwards? Why are you reinventing UML? Why not just use UML?
 
 Whether you see the C4 model as a step forwards or a step backwards depends upon where you are. If you're using UML
-(or SysML, ArchiMate, etc) and it's working for you, stick with it. Unfortunately, UML usage seems to be in decline, 
-and many teams have reverted to using ad hoc boxes and lines diagrams once again. Given that many of those teams don't 
-want to use UML (for various reasons), the C4 model helps introduce some structure and discipline into the way software 
-architecture is communicated. For many teams, the C4 model is sufficient. And for others, perhaps it's a stepping stone 
+(or SysML, ArchiMate, etc) and it's working for you, stick with it. Unfortunately, UML usage seems to be in decline,
+and many teams have reverted to using ad hoc boxes and lines diagrams once again. Given that many of those teams don't
+want to use UML (for various reasons), the C4 model helps introduce some structure and discipline into the way software
+architecture is communicated. For many teams, the C4 model is sufficient. And for others, perhaps it's a stepping stone
 to UML.
 
 ## Why doesn't the C4 model cover business processes, workflows, state machines, domain models, data models, etc?
 
-The focus of the C4 model is the static structures that make up a software system, at different levels of abstraction. 
-If you need to describe other aspects, feel free to supplement the C4 diagrams with UML diagrams, BPML diagrams, 
+The focus of the C4 model is the static structures that make up a software system, at different levels of abstraction.
+If you need to describe other aspects, feel free to supplement the C4 diagrams with UML diagrams, BPML diagrams,
 ArchiMate diagrams, entity relationship diagrams, etc.
 
 ## Does the C4 model imply a design process or team structure?
 
-A common misconception is that a team's design process should follow the levels in the C4 model hierarchy, perhaps 
-with different people on the team being responsible for different levels of diagrams. For example, a business analyst 
-creates the system context diagram, the architect creates the container diagram, while the developers look after the 
+A common misconception is that a team's design process should follow the levels in the C4 model hierarchy, perhaps
+with different people on the team being responsible for different levels of diagrams. For example, a business analyst
+creates the system context diagram, the architect creates the container diagram, while the developers look after the
 remaining levels of detail.
 
-Although you can certainly use the C4 model in this way, this is not the intended or recommended usage pattern. The 
-C4 model is just a way to describe a software system, from different levels of abstraction, and it implies nothing 
+Although you can certainly use the C4 model in this way, this is not the intended or recommended usage pattern. The
+C4 model is just a way to describe a software system, from different levels of abstraction, and it implies nothing
 about the process of delivering software.
 
 ## Using C4 to describe libraries, frameworks and SDKs?
@@ -68,12 +68,12 @@ the software system are bespoke vs those provided for you.
 
 ## Is the C4 model universally applicable?
 
-The C4 model was designed to help describe, document, and diagram custom-built, bespoke software systems. From this 
-perspective, the C4 model can be used to describe a variety of software architectures (monolithic or distributed), 
+The C4 model was designed to help describe, document, and diagram custom-built, bespoke software systems. From this
+perspective, the C4 model can be used to describe a variety of software architectures (monolithic or distributed),
 built in a variety of programming languages, deployed on a variety of platforms (on-premises or cloud).
 
-Solutions that are perhaps less suited to the C4 model include embedded systems/firmware, and solutions that rely on 
-heavy customization rather than bespoke development (e.g. SAP and Salesforce). Even with these solutions, you still may 
+Solutions that are perhaps less suited to the C4 model include embedded systems/firmware, and solutions that rely on
+heavy customization rather than bespoke development (e.g. SAP and Salesforce). Even with these solutions, you still may
 find the System Context and Container diagrams useful.
 
 ## Does the C4 model scale?
@@ -97,13 +97,13 @@ same overall story, at the same level of abstraction.
 
 Here's an example of a container diagram showing a software system comprised of a number of microservices:
 
-[![](/images/scale-1.png)](/images/scale-1.png)
+[![](../images/scale-1.png)](../images/scale-1.png)
 
 This diagram works at the moment, but will quickly become cluttered as we add more services. As an alternative approach,
 rather than creating a single diagram showing 8 services, we could create 8 diagrams that each focus on a single service,
 showing the nearest afferent (inbound) and efferent (outbound) dependencies:
 
-| [![](/images/scale-2.png)](/images/scale-2.png) | [![](/images/scale-3.png)](/images/scale-3.png) | [![](/images/scale-4.png)](/images/scale-4.png) |
+| [![](../images/scale-2.png)](../images/scale-2.png) | [![](../images/scale-3.png)](../images/scale-3.png) | [![](../images/scale-4.png)](../images/scale-4.png) |
 | Service 1 | Service 2 | Service 3 |
 
 This is difficult to do with a diagramming tool, but trivial with a modelling tool -
@@ -113,4 +113,4 @@ alternative visualisations that are not as verbose as the traditional "boxes and
 Again, this is relatively straightforward when you use a modelling tool, and think about the software architecture
 model as being a data structure that you can visualise in different ways.
 
-| [![](/images/scale-5.png)](/images/scale-5.png) | [![](/images/scale-6.png)](/images/scale-6.png) |
+| [![](../images/scale-5.png)](../images/scale-5.png) | [![](../images/scale-6.png)](../images/scale-6.png) |
