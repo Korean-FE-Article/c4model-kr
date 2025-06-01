@@ -107,7 +107,7 @@ showing the nearest afferent (inbound) and efferent (outbound) dependencies:
 | Service 1 | Service 2 | Service 3 |
 
 This is difficult to do with a diagramming tool, but trivial with a modelling tool -
-see [Diagramming vs modelling]({{ site.baseurl }}/tooling#diagramming-vs-modelling) for more details.
+see [Diagramming vs modelling](/tooling#diagramming-vs-modelling) for more details.
 The trade-off here is that we lose the "big picture". So another option is to create some
 alternative visualisations that are not as verbose as the traditional "boxes and lines" diagrams.
 Again, this is relatively straightforward when you use a modelling tool, and think about the software architecture

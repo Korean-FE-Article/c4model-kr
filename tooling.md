@@ -13,7 +13,7 @@ the C4 model. Here are some of the questions you should ask yourself when lookin
 
 - Who are the diagram authors, and how technical are they?
 - Who is the diagram audience, and how will they access the diagrams/documentation?
-- [Diagramming vs modelling?]({{ site.baseurl }}/tooling#diagramming-vs-modelling)
+- [Diagramming vs modelling?](/tooling#diagramming-vs-modelling)
 - A "drag and drop" UI vs "diagrams as code"?
 - Data stored in git next to your source code vs stored in the tool/cloud service?
 - Easy to diff source to use in pull requests?
@@ -28,13 +28,13 @@ the C4 model. Here are some of the questions you should ask yourself when lookin
 ## Diagramming vs modelling
 
 A short note on diagramming vs modelling, since this is the biggest decision you'll need to make regarding tooling.
-The C4 model _can_ be used irrespective of whether you use a diagramming or modelling tool, but there are some
+The C4 model *can* be used irrespective of whether you use a diagramming or modelling tool, but there are some 
 interesting opportunities when you progress from diagramming to modelling.
 
 ### Diagramming
 
-As an industry, we've tended to prefer diagramming (e.g. Visio, draw.io, Lucidchart, PlantUML, Mermaid, etc)
-over modelling (e.g. Sparx EA, Archi, IcePanel, Structurizr, etc), primarily because the barrier to entry is relatively
+As an industry, we've tended to prefer diagramming (e.g. Visio, draw.io, Lucidchart, PlantUML, Mermaid, etc) 
+over modelling (e.g. Sparx EA, Archi, IcePanel, Structurizr, etc), primarily because the barrier to entry is relatively 
 low, and it's seen as a much simpler task. But there are a number of major problems with using diagramming tools for
 software architecture diagrams:
 
@@ -48,7 +48,7 @@ software architecture diagrams:
 
 With a modelling tool, you're building up a non-visual model of your software architecture
 (a single definition of all elements and the relationships between them), and then creating different views
-(that become diagrams) on top of that model. This requires a little more rigour, but the problems can be resolved -
+(that become diagrams) on top of that model. This requires a little more rigour, but the problems can be resolved - 
 modelling tools can understand the semantics of what you're trying to do, provide additional assistance,
 and renaming elements/relationships is easy.
 
@@ -57,7 +57,7 @@ consisting of nodes and edges, with diagrams showing a subset of the graph. Once
 (which is just structured data) and the views (which are rendered as diagrams), you quickly see there are a number of
 interesting opportunities that arise:
 
-- Creating alternative visualisations to help understand large and complicated architecture models - see [Does the C4 model scale?]({{ site.baseurl }}/faq#does-the-c4-model-scale) for more.
+- Creating alternative visualisations to help understand large and complicated architecture models - see [Does the C4 model scale?](/faq#does-the-c4-model-scale) for more.
 - Querying the model.
 - Exporting the model to other tools.
 - etc
@@ -130,7 +130,6 @@ Here's a collection of tooling that provides some degree of specific support for
         <label><input id="toolingDeploymentDiagramsFilter" type="checkbox"> Deployment diagrams</label>
         <div class="smaller">(e.g. diagrams showing deployment and infrastructure concerns)</div>
     </div>
-
 </td>
 <td style="vertical-align: top">
     <h4>Diagramming vs modelling</h4>
@@ -146,7 +145,6 @@ Here's a collection of tooling that provides some degree of specific support for
         <span class="smaller" style="font-weight: normal; background: #02b621; color: #ffffff; padding: 5px; margin-top: 10px;">Recommended</span>
         </div>
     </div>
-
 </td>
 <td style="vertical-align: top">
     <h4>Authoring</h4>
@@ -159,7 +157,6 @@ Here's a collection of tooling that provides some degree of specific support for
         <label><input id="toolingAsCodeFilter" name="authoring" type="radio" checked="checked"> Diagrams and models as code</label>
         <div class="smaller">(for easy version control and integration into build pipelines/other tools)</div>
     </div>
-
 </td>
 <td style="vertical-align: top">
     <h4>Other</h4>
@@ -172,7 +169,6 @@ Here's a collection of tooling that provides some degree of specific support for
         <label><input id="toolingRenderingToolIndependentFilter" type="checkbox"> Rendering tool independent</label>
         <div class="smaller">(to render diagrams with different tools or visualisation formats such as <a href="/diagrams/notation#alternative-visualisations">diagrams, graphs, etc</a>)</div>
     </div>
-
 </td>
 </tr>
 </table>
