@@ -17,11 +17,11 @@ permalink: /abstractions/microservices
 
 우리가 현금이 부족한 소규모 스타트업에서 일하고 있으며, 우리의 임무는 고객에게 비즈니스 역량(business capabilities) A, B, C를 제공하는 "X"라는 이름의 소프트웨어 시스템을 구축하는 것이라 가정해 보겠습니다. 시스템 컨텍스트 다이어그램은 다음과 같습니다.
 
-[![](/images/microservices/1.png)](/images/microservices/1.png)
+[![]({{ site.baseurl }}/images/microservices/1.png)]({{ site.baseurl }}/images/microservices/1.png)
 
 특히 소규모 엔지니어링 팀을 가진 자금이 부족한 스타트업이 무언가를 빠르고 저렴하게 제공하는 가장 좋은 방법은 단일 모놀리식 데이터베이스 스키마에서 읽고 쓰는 단일 모놀리식 웹 애플리케이션으로 구성된 모놀리식 아키텍처를 사용하는 것입니다. 결과적으로 컨테이너 다이어그램은 다음과 같게 됩니다.
 
-[![](/images/microservices/2.png)](/images/microservices/2.png)
+[![]({{ site.baseurl }}/images/microservices/2.png)]({{ site.baseurl }}/images/microservices/2.png)
 
 ## 2 단계 - 마이크로서비스 아키텍처 스타일
 
@@ -37,26 +37,26 @@ permalink: /abstractions/microservices
 
 이 스타트업의 성장 단계에서는 엔지니어를 몇 명 더 고용했지만 단일 팀으로 유지하기로 결정했습니다. 시스템 컨텍스트 다이어그램은 그대로 유지됩니다.
 
-[![](/images/microservices/3.png)](/images/microservices/3.png)
+[![]({{ site.baseurl }}/images/microservices/3.png)]({{ site.baseurl }}/images/microservices/3.png)
 
 하지만 컨테이너 다이어그램은 변경되었습니다. 기존 웹 애플리케이션의 단일 모놀리식 UI를 유지하되 비즈니스 로직과 데이터를 개별 마이크로서비스로 옮기기로 결정했습니다. 이제 컨테이너 다이어그램은 다음과 같습니다.
 
-[![](/images/microservices/4.png)](/images/microservices/4.png)
+[![]({{ site.baseurl }}/images/microservices/4.png)]({{ site.baseurl }}/images/microservices/4.png)
 
 저희는 여전히 하나의 엔지니어링 팀으로 구성되어 있기 때문에 마이크로서비스 아키텍처로의 전환은 팀 내부에서만 확인할 수 있는 구현 세부 사항입니다. 그래서 7개의 컨테이너가 모두 소프트웨어 시스템 경계 안에 표시되어 있으며, 각 "마이크로서비스"는 API 컨테이너(육각형)와 데이터베이스 스키마 컨테이너(원통형)의 조합으로 표시되어 있습니다.
 따라서 이 컨테이너 다이어그램에는 마이크로서비스가 명시적인 상자로 표시되어 있지 않음을 알 수 있습니다.
 대신, 이 버전의 다이어그램에서는 색상 코딩을 사용하여 API와 데이터베이스 스키마 컨테이너 쌍 간의 관계를 표시합니다. 이 관계를 보다 명확하게 표시하고 싶다면 각 쌍 주위에 상자를 그려서 함께 그룹화되어 있음을 표시할 수 있습니다.
 
-[![](/images/microservices/5.png)](/images/microservices/5.png)
+[![]({{ site.baseurl }}/images/microservices/5.png)]({{ site.baseurl }}/images/microservices/5.png)
 
 이제 소프트웨어 시스템의 범위를 비즈니스 역량 D까지 포함하도록 확장한다고 가정해 보겠습니다.
 변경된 시스템 컨텍스트 다이어그램은 다음과 같습니다.
 
-[![](/images/microservices/6.png)](/images/microservices/6.png)
+[![]({{ site.baseurl }}/images/microservices/6.png)]({{ site.baseurl }}/images/microservices/6.png)
 
 그리고 만약 그 새로운 비즈니스 역량이 하나의 스테이트리스 AWS 람다로 구축된 새로운 마이크로서비스에 의해 구현된다면, 변경된 컨테이너 다이어그램은 다음과 같아집니다.
 
-[![](/images/microservices/7.png)](/images/microservices/7.png)
+[![]({{ site.baseurl }}/images/microservices/7.png)]({{ site.baseurl }}/images/microservices/7.png)
 
 ## 3 단계 - 콘웨이의 법칙(Conway's Law)
 
@@ -71,19 +71,19 @@ permalink: /abstractions/microservices
 
 이제 C4 모델을 사용하여 각 소프트웨어 시스템을 소유한 팀의 관점에서 각 서비스를 컨테이너 쌍에서 소프트웨어 시스템으로 “승격”하는 방식으로 각 소프트웨어 시스템을 살펴볼 수 있습니다. 이제 팀 X의 시스템 컨텍스트 다이어그램은 다음과 같게 됩니다.
 
-[![](/images/microservices/8.png)](/images/microservices/8.png)
+[![]({{ site.baseurl }}/images/microservices/8.png)]({{ site.baseurl }}/images/microservices/8.png)
 
 팀 X는 모놀리식 UI만 유지했기 때문에 소프트웨어 시스템 X의 변경된 컨테이너 다이어그램은 다음과 같습니다.
 
-[![](/images/microservices/9.png)](/images/microservices/9.png)
+[![]({{ site.baseurl }}/images/microservices/9.png)]({{ site.baseurl }}/images/microservices/9.png)
 
 그리고 A 팀의 관점에서 서비스 A의 시스템 컨텍스트 다이어그램은 다음과 같습니다.
 
-[![](/images/microservices/10.png)](/images/microservices/10.png)
+[![]({{ site.baseurl }}/images/microservices/10.png)]({{ site.baseurl }}/images/microservices/10.png)
 
 서비스 A의 컨테이너 다이어그램은 다음과 같습니다.
 
-[![](/images/microservices/11.png)](/images/microservices/11.png)
+[![]({{ site.baseurl }}/images/microservices/11.png)]({{ site.baseurl }}/images/microservices/11.png)
 
 ## 결론
 

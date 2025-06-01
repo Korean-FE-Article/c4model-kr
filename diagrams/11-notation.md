@@ -14,14 +14,14 @@ C4 모델은 **표기법에 독립적**이며, 특정한 표기법을 규정하�
 
 ## 요소
 
-| [![Person](../images/notation-person.png)](../images/notation-person.png) | [![Software system](../images/notation-software-system.png)](../images/notation-software-system.png) |
-| [![Container](../images/notation-container.png)](../images/notation-container.png) | [![Component](../images/notation-component.png)](../images/notation-component.png) |
+| [![Person]({{ site.baseurl }}/images/notation-person.png)]({{ site.baseurl }}/images/notation-person.png) | [![Software system]({{ site.baseurl }}/images/notation-software-system.png)]({{ site.baseurl }}/images/notation-software-system.png) |
+| [![Container]({{ site.baseurl }}/images/notation-container.png)]({{ site.baseurl }}/images/notation-container.png) | [![Component]({{ site.baseurl }}/images/notation-component.png)]({{ site.baseurl }}/images/notation-component.png) |
 
 각 박스에는 요소/추상화 타입(`Person`, `Software System`, `Container`, `Component`)이 포함되어 있습니다. 이는 의도적인 결정이며 어떤 추상화 수준이 표시되고 있는지에 대한 모호함을 없애는 데 도움이 됩니다.
 
 ## 관계
 
-| [![Relationship](../images/notation-relationship.png)](../images/notation-relationship.png) |
+| [![Relationship]({{ site.baseurl }}/images/notation-relationship.png)]({{ site.baseurl }}/images/notation-relationship.png) |
 
 ## 다이어그램 키/범례
 
@@ -60,9 +60,9 @@ C4 모델이 추상화 우선 접근법이고 표기법에 독립적이지만, �
 다음은 비교를 위한 시스템 컨텍스트, 컨테이너, 컴포넌트 다이어그램의 세 가지 예시입니다.
 
 | 시스템 컨텍스트 다이어그램 | 컨테이너 다이어그램 | 컴포넌트 다이어그램 |
-| [![시스템 컨텍스트 다이어그램](../images/spring-petclinic-system-context.png)](../images/spring-petclinic-system-context.png) | [![컨테이너 다이어그램](../images/spring-petclinic-containers.png)](../images/spring-petclinic-containers.png) | [![컴포넌트 다이어그램](../images/spring-petclinic-components.png)](../images/spring-petclinic-components.png) |
-| [![시스템 컨텍스트 다이어그램](../images/spring-petclinic-system-context-plantuml.png)](../images/spring-petclinic-system-context-plantuml.png) | [![컨테이너 다이어그램](../images/spring-petclinic-containers-plantuml.png)](../images/spring-petclinic-containers-plantuml.png) | [![컴포넌트 다이어그램](../images/spring-petclinic-components-plantuml.png)](../images/spring-petclinic-components-plantuml.png) |
-| [![시스템 컨텍스트 다이어그램](../images/spring-petclinic-system-context-staruml.png)](../images/spring-petclinic-system-context-staruml.png) | [![컨테이너 다이어그램](../images/spring-petclinic-containers-staruml.png)](../images/spring-petclinic-containers-staruml.png) | [![컴포넌트 다이어그램](../images/spring-petclinic-components-staruml.png)](../images/spring-petclinic-components-staruml.png) |
+| [![시스템 컨텍스트 다이어그램]({{ site.baseurl }}/images/spring-petclinic-system-context.png)]({{ site.baseurl }}/images/spring-petclinic-system-context.png) | [![컨테이너 다이어그램]({{ site.baseurl }}/images/spring-petclinic-containers.png)]({{ site.baseurl }}/images/spring-petclinic-containers.png) | [![컴포넌트 다이어그램]({{ site.baseurl }}/images/spring-petclinic-components.png)]({{ site.baseurl }}/images/spring-petclinic-components.png) |
+| [![시스템 컨텍스트 다이어그램]({{ site.baseurl }}/images/spring-petclinic-system-context-plantuml.png)]({{ site.baseurl }}/images/spring-petclinic-system-context-plantuml.png) | [![컨테이너 다이어그램]({{ site.baseurl }}/images/spring-petclinic-containers-plantuml.png)]({{ site.baseurl }}/images/spring-petclinic-containers-plantuml.png) | [![컴포넌트 다이어그램]({{ site.baseurl }}/images/spring-petclinic-components-plantuml.png)]({{ site.baseurl }}/images/spring-petclinic-components-plantuml.png) |
+| [![시스템 컨텍스트 다이어그램]({{ site.baseurl }}/images/spring-petclinic-system-context-staruml.png)]({{ site.baseurl }}/images/spring-petclinic-system-context-staruml.png) | [![컨테이너 다이어그램]({{ site.baseurl }}/images/spring-petclinic-containers-staruml.png)]({{ site.baseurl }}/images/spring-petclinic-containers-staruml.png) | [![컴포넌트 다이어그램]({{ site.baseurl }}/images/spring-petclinic-components-staruml.png)]({{ site.baseurl }}/images/spring-petclinic-components-staruml.png) |
 
 ## C4와 ArchiMate
 
@@ -72,7 +72,7 @@ ArchiMate로 C4 모델 다이어그램을 생성하는 방법에 대한 자세�
 
 마지막으로, 항상 전통적인 "박스와 화살표" 다이어그램을 사용해야 한다고 느끼지 마시기 바랍니다. 이것이 보통 기본 접근법이지만, 동일한 C4 모델 추상화를 매우 다른 방식으로 보여줄 수 있는 다른, 종종 인터렉티브한 시각화가 있습니다.
 
-| [![](../images/alternative-1.png)](https://structurizr.com/dsl?example=microservices) | [![](../images/alternative-2.png)](https://structurizr.com/dsl?example=microservices&renderer=graph) | [![](../images/alternative-3.png)](https://structurizr.com/dsl?example=microservices&renderer=ilograph) |
+| [![]({{ site.baseurl }}/images/alternative-1.png)](https://structurizr.com/dsl?example=microservices) | [![]({{ site.baseurl }}/images/alternative-2.png)](https://structurizr.com/dsl?example=microservices&renderer=graph) | [![]({{ site.baseurl }}/images/alternative-3.png)](https://structurizr.com/dsl?example=microservices&renderer=ilograph) |
 | 전통적인 "박스와 화살표" 다이어그램은 문서화와 프레젠테이션을 위한 기본 접근법입니다. | D3.js 강제 지향 그래프는 더 큰 소프트웨어 아키텍처를 시각화하는 매우 간결한 방법이며, 의존성을 탐색하는 쉬운 방법도 제공합니다. | Ilograph의 인터렉티브 다이어그램은 선택적으로 확대 및 축소할 수 있는 방법을 제공하여 전체 소프트웨어 아키텍처 모델을 탐색할 수 있게 해줍니다. |
 
 - <sup>1</sup> "C4 = 파란색과 회색 박스"는 일반적인 오해입니다. 이것이 이 웹사이트에 제시된 예시 다이어그램들이 이제 파란색, 녹색, 빨간색 버전 사이를 순환하는 이유입니다!

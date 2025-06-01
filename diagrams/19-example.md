@@ -9,7 +9,7 @@ permalink: /diagrams/example
 # 예시
 
 아래 다이어그램에 마우스를 올리고,
-![zoom-in symbol](/images/zoom-in.svg) 기호가 있는 요소를 찾아서 더블클릭하여 확대하시기를 바랍니다.
+![zoom-in symbol]({{ site.baseurl }}/images/zoom-in.svg) 기호가 있는 요소를 찾아서 더블클릭하여 확대하시기를 바랍니다.
 
 <script type="text/javascript" src="https://static.structurizr.com/js/structurizr-embed.js"></script>
 <iframe id="myEmbeddedDiagram" class="thumbnail" src="https://structurizr.com/embed/36141?diagram=SystemContext&diagramSelector=true&iframe=myEmbeddedDiagram" width="100%" marginwidth="0" marginheight="0" frameborder="0" scrolling="no" allowfullscreen="true"></iframe>

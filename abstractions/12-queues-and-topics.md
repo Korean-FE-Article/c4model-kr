@@ -11,7 +11,7 @@ permalink: /abstractions/queues-and-topics
 여러 서비스(A와 B)가 메시지를 생성하고 여러 다른 서비스(C와 D)가 메시지를 소비하는 서비스 기반 아키텍처가 있다고 상상해 보세요.
 이러한 아키텍처를 다이어그램화하는 일반적인 방법은 다음과 같습니다.
 
-[![](/images/queues-and-topics/1.png)](/images/queues-and-topics/1.png)
+[![]({{ site.baseurl }}/images/queues-and-topics/1.png)]({{ site.baseurl }}/images/queues-and-topics/1.png)
 
 어떤 관점에서 보면 이 다이어그램은 아키텍처를 사실적이고 정확하게 표현한 것입니다.
 서비스 A와 B는 중개자에게 메시지를 보내고, 중개자는 해당 메시지를 서비스 C와 D로 전달합니다.
@@ -24,7 +24,7 @@ permalink: /abstractions/queues-and-topics
 메시지 큐는 본질적으로 데이터 저장소이며, 생산자가 데이터를 추가하고 소비자가 데이터를 가져가는 데이터(메시지)를 저장하는 버킷입니다.
 여기서 중요한 것은 큐와 토픽이 메시지 버스 자체가 아니라 C4 컨테이너라는 점입니다.
 
-[![](/images/queues-and-topics/2.png)](/images/queues-and-topics/2.png)
+[![]({{ site.baseurl }}/images/queues-and-topics/2.png)]({{ site.baseurl }}/images/queues-and-topics/2.png)
 
 이 예제에서는 X라는 큐를 통해 서비스 A와 C가 연결되고, Y라는 큐를 통해 서비스 B와 D가 마찬가지로 지점 간 연결이 있음을 분명히 알 수 있습니다.
 
@@ -32,7 +32,7 @@ permalink: /abstractions/queues-and-topics
 
 실제로 큐를 통해 지점 간 연결이 있는 경우 큐를 생략하고 대신 큐 이름을 화살표로 이동하여 이 다이어그램을 더욱 단순화할 수 있습니다.
 
-[![](/images/queues-and-topics/3.png)](/images/queues-and-topics/3.png)
+[![]({{ site.baseurl }}/images/queues-and-topics/3.png)]({{ site.baseurl }}/images/queues-and-topics/3.png)
 
 다이어그램이 시각적으로 더 단순해졌지만, 큐가 더 이상 다이어그램에서 명확하게 드러나지 않습니다. C4 모델은 표기법에 독립적이므로 메시지 기반 관계를 강조하기 위해 다른 선 스타일(실선 대 점선) 또는 색상을 추가로 사용할 수 있습니다.
 어느 버전의 다이어그램이 다른 버전보다 “더 나은” 것은 아니며, 단지 같은 이야기를 다른 방식으로 전달할 뿐입니다.
@@ -42,7 +42,7 @@ permalink: /abstractions/queues-and-topics
 
 모든 다이어그램에서 메시지가 다이어그램 왼쪽에서 오른쪽으로 흐르며, 화살표에는 “메시지를 보내는 대상”이라는 레이블이 붙어 있음을 볼 수 있습니다. 이 방법은 특히 지점 간 및 큐 기반 아키텍처에 적합하지만, 화살표 방향을 변경하여 더 많은 발행/구독 또는 토픽 기반 아키텍처를 더 잘 나타낼 수도 있습니다.
 
-[![](/images/queues-and-topics/4.png)](/images/queues-and-topics/4.png)
+[![]({{ site.baseurl }}/images/queues-and-topics/4.png)]({{ site.baseurl }}/images/queues-and-topics/4.png)
 
 이 버전의 다이어그램은 메시지 발행자와 구독자의 역할을 더 잘 보여줍니다. 다시 말하지만, 같은 내용을 다른 방식으로 표현한 것일 뿐입니다.
 
