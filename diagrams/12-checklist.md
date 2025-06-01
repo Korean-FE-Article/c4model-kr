@@ -6,34 +6,34 @@ nav_order: 12
 permalink: /diagrams/checklist
 ---
 
-# Software architecture diagram review checklist
+# 소프트웨어 아키텍처 다이어그램 검토 체크리스트
 
-## General
+## 일반사항
 
-| Does the diagram have a title? | Yes | No |
-| Do you understand what the diagram type is? | Yes | No |
-| Do you understand what the diagram scope is? | Yes | No |
-| Does the diagram have a key/legend? | Yes | No |
+| 다이어그램에 제목이 있습니까? | 예 | 아니요 |
+| 다이어그램 타입이 무엇인지 이해하십니까? | 예 | 아니요 |
+| 다이어그램 범위가 무엇인지 이해하십니까? | 예 | 아니요 |
+| 다이어그램에 키/범례가 있습니까? | 예 | 아니요 |
 
-## Elements
+## 요소
 
-| Does every element have a name? | Yes | No |
-| Do you understand the type of every element? (i.e. the level of abstraction; e.g. software system, container, etc) | Yes | No |
-| Do you understand what every element does? | Yes | No |
-| Where applicable, do you understand the technology choices associated with every element? | Yes | No |
-| Do you understand the meaning of all acronyms and abbreviations used? | Yes | No |
-| Do you understand the meaning of all colours used? | Yes | No |
-| Do you understand the meaning of all shapes used? | Yes | No |
-| Do you understand the meaning of all icons used? | Yes | No |
-| Do you understand the meaning of all border styles used? (e.g. solid, dashed, etc) | Yes | No |
-| Do you understand the meaning of all element sizes used? (e.g. small vs large boxes) | Yes | No |
+| 모든 요소에 이름이 있습니까? | 예 | 아니요 |
+| 모든 요소의 타입을 이해하십니까? (즉, 추상화 수준; 예: 소프트웨어 시스템, 컨테이너 등) | 예 | 아니요 |
+| 모든 요소가 무엇을 하는지 이해하십니까? | 예 | 아니요 |
+| 해당하는 경우, 모든 요소와 관련된 기술 선택을 이해하십니까? | 예 | 아니요 |
+| 사용된 모든 약어와 축약어의 의미를 이해하십니까? | 예 | 아니요 |
+| 사용된 모든 색상의 의미를 이해하십니까? | 예 | 아니요 |
+| 사용된 모든 모양의 의미를 이해하십니까? | 예 | 아니요 |
+| 사용된 모든 아이콘의 의미를 이해하십니까? | 예 | 아니요 |
+| 사용된 모든 테두리 스타일의 의미를 이해하십니까? (예: 실선, 점선 등) | 예 | 아니요 |
+| 사용된 모든 요소 크기의 의미를 이해하십니까? (예: 작은 박스 vs 큰 박스) | 예 | 아니요 |
 
-## Relationships
+## 관계
 
-| Does every line have a label describing the intent of that relationship? | Yes | No |
-| Does the description match the relationship direction? | Yes | No |
-| Where applicable, do you understand the technology choices associated with every relationship? (e.g. protocols for inter-process communication) | Yes | No |
-| Do you understand the meaning of all acronyms and abbreviations used? | Yes | No |
-| Do you understand the meaning of all colours used? | Yes | No |
-| Do you understand the meaning of all arrow heads used? | Yes | No |
-| Do you understand the meaning of all line styles used? (e.g. solid, dashed, etc) | Yes | No |
+| 모든 선에 해당 관계의 의도를 설명하는 레이블이 있습니까? | 예 | 아니요 |
+| 설명이 관계 방향과 일치합니까? | 예 | 아니요 |
+| 해당하는 경우, 모든 관계와 관련된 기술 선택을 이해하십니까? (예: 프로세스 간 통신을 위한 프로토콜) | 예 | 아니요 |
+| 사용된 모든 약어와 축약어의 의미를 이해하십니까? | 예 | 아니요 |
+| 사용된 모든 색상의 의미를 이해하십니까? | 예 | 아니요 |
+| 사용된 모든 화살표 머리의 의미를 이해하십니까? | 예 | 아니요 |
+| 사용된 모든 선 스타일의 의미를 이해하십니까? (예: 실선, 점선 등) | 예 | 아니요 |
