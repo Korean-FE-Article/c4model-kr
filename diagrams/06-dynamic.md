@@ -20,7 +20,7 @@ permalink: /diagrams/dynamic
 
 ## 예시 (시퀀스 스타일)
 
-[![A dynamic diagram](../images/bigbankplc-SignIn-sequence.png)](../images/bigbankplc-SignIn-sequence.png)
+[![A dynamic diagram]({{ site.baseurl }}/images/bigbankplc-SignIn-sequence.png)]({{ site.baseurl }}/images/bigbankplc-SignIn-sequence.png)
 
 ## 범위
 

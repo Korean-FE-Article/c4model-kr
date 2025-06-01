@@ -97,13 +97,13 @@ same overall story, at the same level of abstraction.
 
 Here's an example of a container diagram showing a software system comprised of a number of microservices:
 
-[![](../images/scale-1.png)](../images/scale-1.png)
+[![]({{ site.baseurl }}/images/scale-1.png)]({{ site.baseurl }}/images/scale-1.png)
 
 This diagram works at the moment, but will quickly become cluttered as we add more services. As an alternative approach,
 rather than creating a single diagram showing 8 services, we could create 8 diagrams that each focus on a single service,
 showing the nearest afferent (inbound) and efferent (outbound) dependencies:
 
-| [![](../images/scale-2.png)](../images/scale-2.png) | [![](../images/scale-3.png)](../images/scale-3.png) | [![](../images/scale-4.png)](../images/scale-4.png) |
+| [![]({{ site.baseurl }}/images/scale-2.png)]({{ site.baseurl }}/images/scale-2.png) | [![]({{ site.baseurl }}/images/scale-3.png)]({{ site.baseurl }}/images/scale-3.png) | [![]({{ site.baseurl }}/images/scale-4.png)]({{ site.baseurl }}/images/scale-4.png) |
 | Service 1 | Service 2 | Service 3 |
 
 This is difficult to do with a diagramming tool, but trivial with a modelling tool -
@@ -113,4 +113,4 @@ alternative visualisations that are not as verbose as the traditional "boxes and
 Again, this is relatively straightforward when you use a modelling tool, and think about the software architecture
 model as being a data structure that you can visualise in different ways.
 
-| [![](../images/scale-5.png)](../images/scale-5.png) | [![](../images/scale-6.png)](../images/scale-6.png) |
+| [![]({{ site.baseurl }}/images/scale-5.png)]({{ site.baseurl }}/images/scale-5.png) | [![]({{ site.baseurl }}/images/scale-6.png)]({{ site.baseurl }}/images/scale-6.png) |

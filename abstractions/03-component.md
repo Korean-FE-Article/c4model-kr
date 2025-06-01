@@ -32,7 +32,7 @@ C4 모델에서 컴포넌트는 별도로 배포할 수 있는 단위가 _아닙
 여기서 살펴볼 웹 애플리케이션 버전<sup>1</sup>은 웹 MVC 컨트롤러, "비즈니스 로직"이 포함된 서비스, 그리고 데이터 액세스를 위한 레포지토리로 구성된 전형적인 계층화된 아키텍처입니다. 도메인 및 유틸 클래스도 있습니다.
 깃헙 저장소<sup>2</sup>의 복사본을 다운로드하고, 선호하는 IDE에서 열어 코드로부터 UML 클래스 다이어그램을 리버스 엔지니어링해 시각화하면, 다음과 같은 결과를 얻을 수 있습니다.
 
-[![](../images/components-vs-classes-1.png)](../images/components-vs-classes-1.png)
+[![]({{ site.baseurl }}/images/components-vs-classes-1.png)]({{ site.baseurl }}/images/components-vs-classes-1.png)
 
 예상하셨겠지만, 이 다이어그램은 스프링 펫 클리닉 웹 애플리케이션을 구성하는 모든 자바 클래스와 인터페이스, 그리고 그들 사이의 모든 관계를 보여줍니다.
 프로퍼티와 메서드는 그림에 너무 많은 복잡성을 추가하기 때문에 다이어그램에서 숨겨져 있습니다.
@@ -42,7 +42,7 @@ C4 모델에서 컴포넌트는 별도로 배포할 수 있는 단위가 _아닙
 다시 말해, 정적 구조 관점에서 중요한 클래스/인터페이스만 표시해 보겠습니다.
 구체적으로는, 이 특정 코드 베이스에서는 (단순 데이터 구조인) 모델/도메인 클래스와 유틸 클래스를 제외하는 것을 의미합니다.
 
-[![](../images/components-vs-classes-2.png)](../images/components-vs-classes-2.png)
+[![]({{ site.baseurl }}/images/components-vs-classes-2.png)]({{ site.baseurl }}/images/components-vs-classes-2.png)
 
 약간의 재배치 후, 이제 소프트웨어 아키텍처에 대해 논의하기 위한 더 간단한 다이어그램을 갖게 되었습니다.
 또한 아키텍처 계층(컨트롤러, 서비스 및 저장소)도 다시 볼 수 있습니다.
@@ -50,13 +50,13 @@ C4 모델에서 컴포넌트는 별도로 배포할 수 있는 단위가 _아닙
 한 단계 위로 확대하기 위해서는, 이러한 코드 수준 요소 중 어떤 것들이 함께 그룹화되어 "컴포넌트"를 형성할 수 있는지 파악해야 합니다.
 코드 수준 요소를 컴포넌트로 그룹화하는 전략은 코드 베이스마다 다를 수 있지만, 이 코드 베이스의 경우 전략은 다음과 같을 수 있습니다.
 
-[![](../images/components-vs-classes-3.png)](../images/components-vs-classes-3.png)
+[![]({{ site.baseurl }}/images/components-vs-classes-3.png)]({{ site.baseurl }}/images/components-vs-classes-3.png)
 
 파란색 상자들은 각각 이 코드 베이스의 "컴포넌트"를 나타냅니다.
 요약하자면, 각 웹 컨트롤러는 별도의 컴포넌트이며, 나머지 인터페이스와 그 구현 클래스들을 결합한 결과도 컴포넌트입니다.
 코드 수준의 복잡성을 제거하면, 이와 같은 그림을 얻게 됩니다.
 
-[![](../images/components-vs-classes-4.png)](../images/components-vs-classes-4.png)
+[![]({{ site.baseurl }}/images/components-vs-classes-4.png)]({{ site.baseurl }}/images/components-vs-classes-4.png)
 
 본질적으로, 우리는 연관된 기능의 단위를 형성하기 위해 클래스와 인터페이스를 컴포넌트로 그룹화하고 있습니다.
 예시의 `JdbcPetVisitExtractor`처럼 많은 컴포넌트에서 사용되는 공유 코드(예: 추상 기본 클래스, 지원 클래스, 헬퍼 클래스, 유틸리티 클래스 등)가 있을 것입니다.

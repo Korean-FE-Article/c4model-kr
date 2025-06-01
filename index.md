@@ -15,7 +15,7 @@ C4 모델은 다음과 같습니다.
 3. [표기법에 독립적](/diagrams/notation)입니다.
 4. [도구에 독립적](/tooling)입니다.
 
-[![소프트웨어 아키텍처 시각화를 위한 C4 모델 개요](../images/c4-overview.png)](../images/c4-overview.png)
+[![소프트웨어 아키텍처 시각화를 위한 C4 모델 개요]({{ site.baseurl }}/images/c4-overview.png)]({{ site.baseurl }}/images/c4-overview.png)
 
 ## 용도 및 이점
 
@@ -34,7 +34,7 @@ C4 모델은 배우기 쉽고 개발자 친화적인 소프트웨어 아키텍�
 2019년 7월 "Agile on the Beach 2019"에서 촬영
 </td>
 <td>
-<a href="https://leanpub.com/visualising-software-architecture"><img src="../images/book-small.png" width="150px" /></a>
+<a href="https://leanpub.com/visualising-software-architecture"><img src="{{ site.baseurl }}/images/book-small.png" width="150px" /></a>
 <br />
 <b>소프트웨어 아키텍처 시각화를 위한 C4 모델</b>
 <br />Simon Brown

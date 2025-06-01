@@ -13,7 +13,7 @@ This is Simon Brown's [The C4 model for visualising software architecture](https
 ebook, which is available to purchase from Leanpub in PDF, EPUB and MOBI formats.
 It forms the basis for his [workshop](https://simonbrown.je#workshop3) and includes a number of more advanced C4 model topics.
 
-[![The C4 model for visualising software architecture book](../images/book-small.png)](https://leanpub.com/visualising-software-architecture)
+[![The C4 model for visualising software architecture book]({{ site.baseurl }}/images/book-small.png)](https://leanpub.com/visualising-software-architecture)
 
 It is also referenced in the following books:
 
