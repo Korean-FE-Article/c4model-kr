@@ -6,56 +6,42 @@ nav_order: 99
 permalink: /diagrams/faq
 ---
 
-# Frequently asked questions
+# 자주 묻는 질문
 
-## Should the lines represent dependencies or data flow?
+## 선은 종속성과 데이터 흐름 중 무엇을 나타내야 하나요?
 
-This is your choice. Sometimes diagrams work better showing dependency relationships (e.g. uses, reads from, etc),
-and sometimes data flow (e.g. customer update events) works better. Whichever you choose, make sure that the
-description of the line matches the direction of the arrow.
+선택은 여러분의 몫입니다. 때로는 다이어그램이 종속 관계(예: 사용, 읽기 등)를 나타내는 것이 더 효과적일 수 있고, 때로는 데이터 흐름(예: 고객 업데이트 이벤트)인 것이 더 효과적일 수 있습니다. 어느 쪽을 선택하든, 선의 설명이 화살표 방향과 일치하는지 확인하세요.
 
-It's also worth remembering that most relationships can be expressed either way, and the more explicit you can be,
-the better. For example, describing a relationship as "sends customer update events to" can be more descriptive
-than simply "customer update events".
+또 대부분의 관계는 두 방식 중 어느 쪽으로도 표현할 수 있으며 표현이 구체적일수록 이해하기 쉽습니다.
+예를 들어 단순히 “고객 업데이트 이벤트”라고 쓰는 것보다, “고객 업데이트 이벤트를 전송함”이라고 설명하는 것이 훨씬 더 효과적일 수 있습니다.
 
-## Will the diagrams become outdated quickly?
+## 다이어그램이 금방 구식이 되지는 않나요?
 
-Due to the hierarchical nature of the C4 model, each diagram will change at a different rate.
+C4 모델의 계층적 특성으로 인해 각 다이어그램은 서로 다른 속도로 변경됩니다.
 
-- __System context diagram__: In most cases, the system context diagram will change very slowly, as this describes the 
-landscape that the software system is operating within.
-- __Container diagram__: Unless you're building a software system that makes heavy use of microservices or serverless 
-lambdas/functions/etc, the container diagram will also change relatively slowly.
-- __Component diagram__: For any software system under active development, the component diagrams may change frequently 
-as the team adds, removes or restructures the code into cohesive components.
-- __Code diagram__: The level 4 code (e.g. class) diagrams will potentially become outdated very quickly if the codebase is
-under active development. For this reason, the recommendation is to (1) not create them at all or (2) generate them 
-on-demand using tooling such as your IDE.
+- __시스템 컨텍스트 다이어그램__: 대부분의 경우, 시스템 컨텍스트 다이어그램은 매우 느리게 변경됩니다. 이는 소프트웨어 시스템이 작동하는 환경을 설명하기 때문입니다.
+- __컨테이너 다이어그램__: 마이크로서비스나 서버리스 람다/함수 등을 많이 사용하는 소프트웨어 시스템을 구축하지 않는 한 컨테이너 다이어그램도 비교적 느리게 변경됩니다.
+- __컴포넌트 다이어그램__: 활발하게 개발 중인 소프트웨어 시스템의 경우 팀이 코드를 추가, 제거하거나 응집력 있는 구성 요소로 재구성함에 따라 컴포넌트 다이어그램이 자주 변경될 수 있습니다.
+- __코드 다이어그램__: 레벨 4 코드(예: 클래스) 다이어그램은 코드베이스가 활발하게 개발 중일 경우 매우 빠르게 구식이 될 수 있습니다. 따라서 (1) 아예 생성하지 않거나 (2) IDE와 같은 도구를 사용하여 필요에 따라 생성하는 것이 좋습니다.
 
-Of course, the above only applies when you are creating your C4 diagrams by hand.
-Automatically generating your diagrams will ensure they are kept up to date and reflect reality at all times.
-Possible approaches to do this include:
+물론, 위의 내용은 C4 다이어그램을 직접 만드는 경우에만 적용됩니다. 다이어그램을 자동으로 생성하면 다이어그램이 최신 상태로 유지되고 항상 실제 상황을 반영할 수 있습니다. 이를 위해 할 수 있는 방법은 다음과 같습니다.
 
-- __System landscape/context diagrams__: Using existing system/service catalogs (e.g. Backstage, ServiceNow, etc) as a source of data for identifying software systems and relationships.
-- __Container diagrams__: Parsing log files or using OpenTelemetry data as a source of data for identifying microservices and relationships.
-- __Component diagrams__: Static analysis/reverse-engineering of code as a source of data for identifying components and their relationships.
-- __Deployment diagrams__: Parsing "infrastructure as code" definitions (e.g. Terraform, CloudFormation, etc) or reverse-engineering cloud environment configuration as a source of data for identifying deployment elements.
+- __시스템 환경/컨텍스트 다이어그램__: 기존 시스템/서비스 카탈로그(예: Backstage, ServiceNow 등)를 소프트웨어 시스템과 관계를 식별하기 위한 데이터 소스로 사용합니다.
+- __컨테이너 다이어그램__: 로그 파일을 구문 분석하거나 OpenTelemetry 데이터를 데이터 소스로 사용하여 마이크로서비스와 관계를 식별합니다.
+- __컴포넌트 다이어그램__: 코드 자체를 정적으로 분석하거나 리버스 엔지니어링해서 구성 요소들과 그 관계를 추출할 수 있습니다.
+- __배포 다이어그램__: "코드로서의 인프라" 정의(예: Terraform, CloudFormation 등)를 구문 분석하거나 클라우드 환경 구성을 리버스 엔지니어링하여 배포 요소를 식별하기 위한 데이터 소스로 사용합니다.
 
-## The C4 model vs UML, ArchiMate and SysML?
+## C4 모델 vs UML, ArchiMate 그리고 SysML?
 
-Although existing notations such as UML, ArchiMate and SysML already exist, many software development teams don't 
-seem to use them. Often this is because teams don't know these notations well enough, perceive them to be too 
-complicated, think they are not compatible with agile approaches or don't have the required tooling.
+UML, ArchiMate, SysML과 같은 기존 표기법이 이미 존재하지만, 많은 소프트웨어 개발 팀에서 이를 사용하지 않는 것 같습니다. 이러한 표기법을 잘 모르거나, 너무 복잡하다고 인식하거나, 애자일 접근 방식과 호환되지 않는다고 생각하거나, 필요한 도구가 없기 때문인 경우가 많습니다.
 
-If you are already successfully using one of these notations to communicate software architecture, and it's working, 
-stick with it. If not, try the C4 model. And don't be afraid to supplement the C4 diagrams with UML state diagrams, 
-timing diagrams, etc if you need to.
+이미 이러한 표기법 중 하나를 사용하여 소프트웨어 아키텍처를 성공적으로 표현하고 있고 잘 작동하고 있다면 그 방식을 계속 사용해도 좋습니다. 그렇지 않다면 C4 모델을 사용해 보세요. 그리고 필요하다면 UML 상태 다이어그램, 타이밍 다이어그램 등으로 C4 다이어그램을 보완하는 것을 두려워하지 마세요.
 
-## Can we combine C4 and arc42?
+## C4와 arc42를 함께 사용할 수 있나요?
 
-Yes, many teams do, and the C4 model is compatible with the [arc42 documentation template](http://arc42.org) as follows.
+네, 많은 팀이 그렇게 하고 있으며, C4 모델은 다음과 같이 [arc42 문서 템플릿](http://arc42.org)과 호환됩니다.
 
-- Context and Scope => System Context diagram
-- Building Block View (level 1) => Container diagram
-- Building Block View (level 2) => Component diagram
-- Building Block View (level 3) => Code (e.g. class) diagram
+- 컨텍스트 및 스코프 => 시스템 컨텍스트 다이어그램
+- 빌딩 블록 뷰(레벨 1) => 컨테이너 다이어그램
+- 빌딩 블록 뷰(레벨 2) => 컴포넌트 다이어그램
+- 빌딩 블록 뷰(레벨 3) => 코드(예: 클래스) 다이어그램
