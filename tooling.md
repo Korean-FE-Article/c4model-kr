@@ -5,68 +5,55 @@ nav_order: 6
 permalink: /tooling
 ---
 
-# Tooling
+# 도구 선택(Tooling)
 
-For design sessions, you might find a whiteboard or flip chart paper better for collaboration, and iterating quickly.
-For long-lived documentation, there are a number of tools can help create software architecture diagrams based upon
-the C4 model. Here are some of the questions you should ask yourself when looking at tooling:
+설계 세션에서는 협업과 빠른 반복 작업을 위해 화이트보드나 플립차트 용지가 더 나을 수 있습니다. 장기적으로 사용될 문서의 경우, C4 모델을 기반으로 소프트웨어 아키텍처 다이어그램을 만드는 데 도움이 되는 여러 도구가 있습니다. 도구를 살펴볼 때 다음과 같은 몇 가지 질문을 스스로에게 던져보세요.
 
-- Who are the diagram authors, and how technical are they?
-- Who is the diagram audience, and how will they access the diagrams/documentation?
-- [Diagramming vs modelling?](/tooling#diagramming-vs-modelling)
-- A "drag and drop" UI vs "diagrams as code"?
-- Data stored in git next to your source code vs stored in the tool/cloud service?
-- Easy to diff source to use in pull requests?
-- Closed vs open data format?
-- Interactive vs static diagrams?
-- Free vs paid?
-- Closed vs open source?
-- Cloud vs self-hosted?
-- Short-lived vs long-lived documentation?
-- Team only diagramming vs enterprise-wide modelling?
+- 다이어그램을 작성한 사람은 누구이며, 얼마나 기술적인가요?
+- 다이어그램의 대상 독자는 누구이며, 그들은 어떻게 다이어그램/문서에 접근할까요?
+- [다이어그래밍 vs 모델링?]((/tooling#diagramming-vs-modelling))
+- "드래그 앤 드롭 UI" vs "코드로 된 다이어그램"?
+- 데이터를 소스 코드와 가까운 git에 저장 vs 도구/클라우드 서비스에 저장?
+- 풀 리퀘스트에 사용할 소스를 쉽게 구분할 수 있나요?
+- 폐쇄형 데이터 형식인가요? 개방형 데이터 형식인가요?
+- 인터랙티브 다이어그램인가요? 정적 다이어그램인가요?
+- 무료인가요? 유료인가요?
+- 클로즈드 소스인가요? 오픈 소스인가요?
+- 클라우드를 사용하나요? 셀프호스팅하나요?
+- 단기(Short-lived) 문서화인가요? 장기(Long-lived) 문서화인가요?
+- 팀 전용 다이어그래밍인가요? 전사적(enterprise-wide) 모델링인가요?
+그
 
-## Diagramming vs modelling
+## 다이어그래밍 vs 모델링
 
-A short note on diagramming vs modelling, since this is the biggest decision you'll need to make regarding tooling.
-The C4 model *can* be used irrespective of whether you use a diagramming or modelling tool, but there are some 
-interesting opportunities when you progress from diagramming to modelling.
+다이어그래밍과 모델링에 대해 간략히 설명하겠습니다. 툴 사용과 관련하여 가장 중요한 결정이기 때문입니다. C4 모델은 다이어그래밍 툴이든 모델링 툴이든 상관없이 사용할 *수* 있지만, 다이어그래밍에서 모델링으로 전환할 때 흥미로운 기회들이 있습니다.
 
-### Diagramming
+### 다이어그래밍
 
-As an industry, we've tended to prefer diagramming (e.g. Visio, draw.io, Lucidchart, PlantUML, Mermaid, etc) 
-over modelling (e.g. Sparx EA, Archi, IcePanel, Structurizr, etc), primarily because the barrier to entry is relatively 
-low, and it's seen as a much simpler task. But there are a number of major problems with using diagramming tools for
-software architecture diagrams:
+업계에서는 모델링(예: Sparx EA, Archi, IcePanel, Structurizr 등)보다 다이어그래밍(예: Visio, draw.io, Lucidchart, PlantUML, Mermaid 등)을 선호하는 경향이 있습니다. 주된 이유는 진입 장벽이 상대적으로 낮고 훨씬 간단한 작업으로 여겨지기 때문입니다. 하지만 소프트웨어 아키텍처 다이어그램에 다이어그래밍 도구를 사용하는 데에는 몇 가지 큰 문제가 있습니다.
 
-1. The domain language of diagramming tools is "boxes and lines", which means:
-   - They can't provide any assistance or validation of your diagrams.
-   - You can't query the diagrams (e.g. "show me all dependencies of component X").
-2. Reusing diagram elements is done via copy-paste - if you rename a box, you need to rename it across every diagram where it appears.
-3. Many diagramming tools have data formats that are hard to diff, making them tricky to use in conjunction with pull requests, for example.
+1. 다이어그래밍 도구의 도메인 언어는 "상자와 선"입니다. 이는 다음을 의미합니다.
+  - 그것들은 당신의 다이어그램에 대한 어떠한 도움이나 검증도 제공할 수 없습니다.
+  - 다이어그램을 쿼리할 수 없습니다(예: "구성 요소 X의 모든 종속성을 보여주세요").
+2. 다이어그램 요소를 재사용하려면 복사-붙여넣기를 사용해야 합니다. 즉, 상자의 이름을 바꾸면 해당 상자가 나타나는 모든 다이어그램에서 상자의 이름을 바꿔야 합니다.
+3. 많은 다이어그래밍 도구가 차이를 비교하기 힘든 데이터 구조를 갖고 있기 때문에 풀 리퀘스트와 함께 사용하기가 까다로운 경우가 많습니다.
 
-### Modelling
+### 모델링
 
-With a modelling tool, you're building up a non-visual model of your software architecture
-(a single definition of all elements and the relationships between them), and then creating different views
-(that become diagrams) on top of that model. This requires a little more rigour, but the problems can be resolved - 
-modelling tools can understand the semantics of what you're trying to do, provide additional assistance,
-and renaming elements/relationships is easy.
+모델링 도구를 사용하면 소프트웨어 아키텍처의 비시각적 모델(모든 요소와 요소 간의 관계에 대한 단일 정의)을 구축한 다음 그 모델에 대해 다양한 뷰(다이어그램이 되는)를 만들 수 있습니다. 모델링 도구는 사용자가 하려는 작업의 의미를 이해하고 추가적인 지원을 제공하며 요소/관계의 이름을 쉽게 변경할 수 있으므로 문제를 해결할 수 있습니다.
 
-Software architecture models are essentially just [directed graphs](https://en.wikipedia.org/wiki/Directed_graph),
-consisting of nodes and edges, with diagrams showing a subset of the graph. Once you see the separation of the model
-(which is just structured data) and the views (which are rendered as diagrams), you quickly see there are a number of
-interesting opportunities that arise:
+소프트웨어 아키텍처 모델은 본질적으로 노드와 에지로 구성된 [유향 그래프](https://en.wikipedia.org/wiki/Directed_graph) 이며, 다이어그램은 그래프의 하위 집합을 보여줍니다. 모델(구조화된 데이터)과 뷰(다이어그램으로 표현되는)를 분리하면 여러 가지 흥미로운 가능성이 생긴다는 것을 금방 알 수 있습니다.
 
-- Creating alternative visualisations to help understand large and complicated architecture models - see [Does the C4 model scale?](/faq#does-the-c4-model-scale) for more.
-- Querying the model.
-- Exporting the model to other tools.
-- etc
+- 대규모의 복잡한 아키텍처 모델을 이해하는 데 도움이 되는 대체 시각화 만들기 - 자세한 내용은 [C4 모델은 확장 가능한가요?](/faq#does-the-c4-model-scale)를 참고하세요.
+- 모델 쿼리.
+- 모델을 다른 도구로 내보내기.
+- 그 외
 
-A model is just data! And we, as software developers, have an endless supply of tools to visualise and manipulate that data.
+모델은 단지 데이터일 뿐입니다! 그리고 소프트웨어 개발자인 우리는 그 데이터를 시각화하고 조작할 수 있는 도구를 무궁무진하게 보유하고 있습니다.
 
-## Options
+## 옵션
 
-Here's a collection of tooling that provides some degree of specific support for the C4 model.
+다음은 C4 모델의 특정 부분에 대한 지원을 제공하는 도구 모음입니다.
 
 <script type="application/javascript" src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
 
@@ -115,59 +102,59 @@ Here's a collection of tooling that provides some degree of specific support for
 <table>
 <tr>
 <td style="vertical-align: top">
-    <h4>Supported diagram types</h4>
+    <h4>지원되는 다이어그램 유형</h4>
     <div class="toolingOptionFilter">
-        <label><input id="toolingStaticDiagramsFilter" type="checkbox" checked="checked" disabled="disabled"> Static diagrams</label>
-        <div class="smaller">(e.g. system context, container, and component diagrams)</div>
+        <label><input id="toolingStaticDiagramsFilter" type="checkbox" checked="checked" disabled="disabled"> 정적 다이어그램</label>
+        <div class="smaller">(예: 시스템 컨텍스트, 컨테이너 및 컴포넌트 다이어그램)</div>
     </div>
 
     <div class="toolingOptionFilter">
-        <label><input id="toolingDynamicDiagramsFilter" type="checkbox"> Dynamic diagrams</label>
-        <div class="smaller">(e.g. collaboration or sequence diagrams)</div>
+        <label><input id="toolingDynamicDiagramsFilter" type="checkbox"> 동적 다이어그램</label>
+        <div class="smaller">(예: 협업 또는 시퀀스 다이어그램)</div>
     </div>
 
     <div class="toolingOptionFilter">
-        <label><input id="toolingDeploymentDiagramsFilter" type="checkbox"> Deployment diagrams</label>
-        <div class="smaller">(e.g. diagrams showing deployment and infrastructure concerns)</div>
+        <label><input id="toolingDeploymentDiagramsFilter" type="checkbox"> 배포 다이어그램</label>
+        <div class="smaller">(예: 배포 및 인프라 문제를 보여주는 다이어그램)</div>
     </div>
 </td>
 <td style="vertical-align: top">
-    <h4>Diagramming vs modelling</h4>
+    <h4>다이어그래밍 vs 모델링</h4>
     <div class="toolingOptionFilter">
-        <label><input id="toolingDiagrammingFilter" name="diagramVsModel" type="radio"> Diagramming tool</label>
-        <div class="smaller">(boxes and arrows are reused via copy and paste, no assistance, no validation rules, etc)</div>
+        <label><input id="toolingDiagrammingFilter" name="diagramVsModel" type="radio"> 다이어그래밍 도구</label>
+        <div class="smaller">(상자와 화살표는 복사 및 붙여넣기를 통해 재사용되며, 보조 기능이나 유효성 검사 규칙 등이 없습니다.)</div>
     </div>
 
     <div class="toolingOptionFilter">
-        <label><input id="toolingModelBasedFilter" name="diagramVsModel" type="radio" checked="checked"> Reuse elements across multiple diagrams</label>
-        <div class="smaller">(i.e. a modelling tool - to keep multiple diagrams in sync automatically when you rename elements)</div>
+        <label><input id="toolingModelBasedFilter" name="diagramVsModel" type="radio" checked="checked"> 여러 다이어그램에서 요소를 재사용</label>
+        <div class="smaller">(즉, 여러 다이어그램을 요소의 이름을 바꿀 때 자동으로 동기화하기 위한 모델링 도구)</div>
         <div style="margin-top: 10px">
-        <span class="smaller" style="font-weight: normal; background: #02b621; color: #ffffff; padding: 5px; margin-top: 10px;">Recommended</span>
+        <span class="smaller" style="font-weight: normal; background: #02b621; color: #ffffff; padding: 5px; margin-top: 10px;">추천</span>
         </div>
     </div>
 </td>
 <td style="vertical-align: top">
-    <h4>Authoring</h4>
+    <h4>작성(Authoring)</h4>
     <div class="toolingOptionFilter">
-        <label><input id="toolingWithUIFilter" name="authoring" type="radio"> Graphical user interface</label>
-        <div class="smaller">(drag and drop modelling UI)</div>
+        <label><input id="toolingWithUIFilter" name="authoring" type="radio"> 그래픽 유저 인터페이스</label>
+        <div class="smaller">(드래그 앤 드롭 모델링 UI)</div>
     </div>
 
     <div class="toolingOptionFilter">
-        <label><input id="toolingAsCodeFilter" name="authoring" type="radio" checked="checked"> Diagrams and models as code</label>
-        <div class="smaller">(for easy version control and integration into build pipelines/other tools)</div>
+        <label><input id="toolingAsCodeFilter" name="authoring" type="radio" checked="checked"> 코드로서의 다이어그램과 모델</label>
+        <div class="smaller">(쉬운 버전 관리 및 빌드 파이프라인/기타 도구와의 통합을 위해)</div>
     </div>
 </td>
 <td style="vertical-align: top">
-    <h4>Other</h4>
+    <h4>기타</h4>
     <div class="toolingOptionFilter">
-        <label><input id="toolingOpenSourceFilter" type="checkbox"> Open source</label>
-        <div class="smaller">(free, fork/customize, etc)</div>
+        <label><input id="toolingOpenSourceFilter" type="checkbox"> 오픈소스</label>
+        <div class="smaller">(무료, 포크/커스터마이즈 등)</div>
     </div>
 
     <div class="toolingOptionFilter">
-        <label><input id="toolingRenderingToolIndependentFilter" type="checkbox"> Rendering tool independent</label>
-        <div class="smaller">(to render diagrams with different tools or visualisation formats such as <a href="/diagrams/notation#alternative-visualisations">diagrams, graphs, etc</a>)</div>
+        <label><input id="toolingRenderingToolIndependentFilter" type="checkbox"> 렌더링 도구에 독립적</label>
+        <div class="smaller">(<a href="/diagrams/notation#alternative-visualisations">다이어그램, 그래프 등</a>과 같은 다양한 도구 또는 시각화 방식으로 다이어그램을 렌더링하기 위해)</div>
     </div>
 </td>
 </tr>
