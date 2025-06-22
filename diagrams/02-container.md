@@ -42,7 +42,7 @@ permalink: /diagrams/container
 
 ## 참고 사항
 
-이 다이어그램은 클러스터링, 로드 밸런서, 복제, 장애 조치 등에 대해 언급하지 않습니다. 이는 다양한 환경(예: 프로덕션, 스테이징, 개발 등)에서 달라질 가능성이 높기 때문입니다. 이 정보는 하나 이상의 [배포 다이어그램](/diagrams/deployment)을 통해 더 잘 표현할 수 있습니다.
+이 다이어그램은 클러스터링, 로드 밸런서, 복제, 장애 조치 등에 대해 언급하지 않습니다. 이는 다양한 환경(예: 프로덕션, 스테이징, 개발 등)에서 달라질 가능성이 높기 때문입니다. 이 정보는 하나 이상의 [배포 다이어그램]({{ site.baseurl }}/diagrams/deployment)을 통해 더 잘 표현할 수 있습니다.
 
 <script type="application/javascript" src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
 <script type="application/javascript" src="/assets/c4model.js"></script>

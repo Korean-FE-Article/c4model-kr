@@ -22,19 +22,21 @@ permalink: /tooling
 - 클라우드를 사용하나요? 셀프호스팅하나요?
 - 단기(Short-lived) 문서화인가요? 장기(Long-lived) 문서화인가요?
 - 팀 전용 다이어그래밍인가요? 전사적(enterprise-wide) 모델링인가요?
-그
+  그
 
 ## 다이어그래밍 vs 모델링
 
-다이어그래밍과 모델링에 대해 간략히 설명하겠습니다. 툴 사용과 관련하여 가장 중요한 결정이기 때문입니다. C4 모델은 다이어그래밍 툴이든 모델링 툴이든 상관없이 사용할 *수* 있지만, 다이어그래밍에서 모델링으로 전환할 때 흥미로운 기회들이 있습니다.
+다이어그래밍과 모델링에 대해 간략히 설명하겠습니다. 툴 사용과 관련하여 가장 중요한 결정이기 때문입니다. C4 모델은 다이어그래밍 툴이든 모델링 툴이든 상관없이 사용할 _수_ 있지만, 다이어그래밍에서 모델링으로 전환할 때 흥미로운 기회들이 있습니다.
 
 ### 다이어그래밍
 
 업계에서는 모델링(예: Sparx EA, Archi, IcePanel, Structurizr 등)보다 다이어그래밍(예: Visio, draw.io, Lucidchart, PlantUML, Mermaid 등)을 선호하는 경향이 있습니다. 주된 이유는 진입 장벽이 상대적으로 낮고 훨씬 간단한 작업으로 여겨지기 때문입니다. 하지만 소프트웨어 아키텍처 다이어그램에 다이어그래밍 도구를 사용하는 데에는 몇 가지 큰 문제가 있습니다.
 
 1. 다이어그래밍 도구의 도메인 언어는 "상자와 선"입니다. 이는 다음을 의미합니다.
-  - 그것들은 당신의 다이어그램에 대한 어떠한 도움이나 검증도 제공할 수 없습니다.
-  - 다이어그램을 쿼리할 수 없습니다(예: "구성 요소 X의 모든 종속성을 보여주세요").
+
+- 그것들은 당신의 다이어그램에 대한 어떠한 도움이나 검증도 제공할 수 없습니다.
+- 다이어그램을 쿼리할 수 없습니다(예: "구성 요소 X의 모든 종속성을 보여주세요").
+
 2. 다이어그램 요소를 재사용하려면 복사-붙여넣기를 사용해야 합니다. 즉, 상자의 이름을 바꾸면 해당 상자가 나타나는 모든 다이어그램에서 상자의 이름을 바꿔야 합니다.
 3. 많은 다이어그래밍 도구가 차이를 비교하기 힘든 데이터 구조를 갖고 있기 때문에 풀 리퀘스트와 함께 사용하기가 까다로운 경우가 많습니다.
 
@@ -44,7 +46,7 @@ permalink: /tooling
 
 소프트웨어 아키텍처 모델은 본질적으로 노드와 에지로 구성된 [유향 그래프](https://en.wikipedia.org/wiki/Directed_graph) 이며, 다이어그램은 그래프의 하위 집합을 보여줍니다. 모델(구조화된 데이터)과 뷰(다이어그램으로 표현되는)를 분리하면 여러 가지 흥미로운 가능성이 생긴다는 것을 금방 알 수 있습니다.
 
-- 대규모의 복잡한 아키텍처 모델을 이해하는 데 도움이 되는 대체 시각화 만들기 - 자세한 내용은 [C4 모델은 확장 가능한가요?](/faq#does-the-c4-model-scale)를 참고하세요.
+- 대규모의 복잡한 아키텍처 모델을 이해하는 데 도움이 되는 대체 시각화 만들기 - 자세한 내용은 [C4 모델은 확장 가능한가요?]({{ site.baseurl }}/faq#does-the-c4-model-scale)를 참고하세요.
 - 모델 쿼리.
 - 모델을 다른 도구로 내보내기.
 - 그 외
@@ -117,6 +119,7 @@ permalink: /tooling
         <label><input id="toolingDeploymentDiagramsFilter" type="checkbox"> 배포 다이어그램</label>
         <div class="smaller">(예: 배포 및 인프라 문제를 보여주는 다이어그램)</div>
     </div>
+
 </td>
 <td style="vertical-align: top">
     <h4>다이어그래밍 vs 모델링</h4>
@@ -132,6 +135,7 @@ permalink: /tooling
         <span class="smaller" style="font-weight: normal; background: #02b621; color: #ffffff; padding: 5px; margin-top: 10px;">추천</span>
         </div>
     </div>
+
 </td>
 <td style="vertical-align: top">
     <h4>작성(Authoring)</h4>
@@ -144,6 +148,7 @@ permalink: /tooling
         <label><input id="toolingAsCodeFilter" name="authoring" type="radio" checked="checked"> 코드로서의 다이어그램과 모델</label>
         <div class="smaller">(쉬운 버전 관리 및 빌드 파이프라인/기타 도구와의 통합을 위해)</div>
     </div>
+
 </td>
 <td style="vertical-align: top">
     <h4>기타</h4>
@@ -156,6 +161,7 @@ permalink: /tooling
         <label><input id="toolingRenderingToolIndependentFilter" type="checkbox"> 렌더링 도구에 독립적</label>
         <div class="smaller">(<a href="/diagrams/notation#alternative-visualisations">다이어그램, 그래프 등</a>과 같은 다양한 도구 또는 시각화 방식으로 다이어그램을 렌더링하기 위해)</div>
     </div>
+
 </td>
 </tr>
 </table>

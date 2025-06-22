@@ -42,7 +42,7 @@ Simon Brown이 쓴 전자책 [소프트웨어 아키텍처 시각화를 위한 C
 ## C4 모델은 어디에서 사용되고 있나요?
 
 Simon은 직접 30개 이상의 국가에서 10,000명 이상의 사람들에게 C4 모델에 대해 가르쳤으며, 컨퍼런스 강연, 비디오, 책, 기사를 통해 이보다 훨씬 더 많은 사람들에게 전파했습니다.
-이외에도 다른 많은 사람들이 C4 모델에 대해 가르치고, 강연하고, 글을 쓰고 있으며, [여러 도구에 접목](/tooling)되고 있습니다.
+이외에도 다른 많은 사람들이 C4 모델에 대해 가르치고, 강연하고, 글을 쓰고 있으며, [여러 도구에 접목]({{ site.baseurl }}/tooling)되고 있습니다.
 다음은 몇 가지 사례 입니다.
 
 - 스포티파이(Spotify): [스포티파이 엔지니어링: 소프트웨어 시각화 - 도전, 수락](https://engineering.atspotify.com/2022/07/software-visualization-challenge-accepted/)
@@ -57,8 +57,8 @@ Simon은 직접 30개 이상의 국가에서 10,000명 이상의 사람들에게
 - [위키백과](https://en.wikipedia.org/wiki/C4_model)
 - [InfoQ: 소프트웨어 아키텍처를 위한 C4 모델](https://www.infoq.com/articles/C4-architecture-model)
 - [InfoQ: O modelo C4 de documentação para Arquitetura de Software](https://www.infoq.com/br/articles/C4-architecture-model)
-- [InfoQ: 用于软件架构的C4模型](https://www.infoq.com/cn/articles/C4-architecture-model)
-- [InfoQ: ソフトウェアアーキテクチャのためのC4モデル](https://www.infoq.com/jp/articles/C4-architecture-model)
+- [InfoQ: 用于软件架构的 C4 模型](https://www.infoq.com/cn/articles/C4-architecture-model)
+- [InfoQ: ソフトウェアアーキテクチャのための C4 モデル](https://www.infoq.com/jp/articles/C4-architecture-model)
 - [오픈 그룹의 표준, 오픈 애자일 아키텍처™(Open Agile Architecture™)](https://publications.opengroup.org/c208)
 - [ArchiMate® 언어를 사용한 애자일 아키텍처 모델링](https://publications.opengroup.org/g20e)
 - [Martin Fowler: 인프라 플랫폼 구축 - 기술 비전 전달하기](https://martinfowler.com/articles/building-infrastructure-platform.html#CommunicateYourTechnicalVision) (Poppy Rowse 그리고 Chris Shepherd)
