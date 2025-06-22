@@ -11,10 +11,10 @@ has_toc: false
 
 "코드의 지도"를 만들기 위해서는 먼저, 소프트웨어 시스템의 정적 구조를 설명할 수 있는 공통된 추상화 세트가 필요합니다. C4 모델에서는,
 
-> [소프트웨어 시스템]({{ site.baseurl }}/01-software-system.md)은
-> 하나 이상의 [컨테이너]({{ site.baseurl }}/02-container.md)(애플리케이션과 데이터 저장소)로 구성되고,
-> 각 컨테이너는 하나 이상의 [컴포넌트]({{ site.baseurl }}/03-component.md)를 포함하며, 이 컴포넌트들은
-> 하나 이상의 [코드]({{ site.baseurl }}/04-component.md) 요소(클래스, 인터페이스, 객체, 함수 등)로 구현됩니다.
+> [소프트웨어 시스템]({{ site.baseurl }}/abstractions/01-software-system.md)은
+> 하나 이상의 [컨테이너]({{ site.baseurl }}/abstractions/02-container.md)(애플리케이션과 데이터 저장소)로 구성되고,
+> 각 컨테이너는 하나 이상의 [컴포넌트]({{ site.baseurl }}/abstractions/03-component.md)를 포함하며, 이 컴포넌트들은
+> 하나 이상의 [코드]({{ site.baseurl }}/abstractions/04-component.md) 요소(클래스, 인터페이스, 객체, 함수 등)로 구현됩니다.
 > 그리고 사람들(액터, 역할, 페르소나, 특정 개인 등)은 우리가 만든 소프트웨어 시스템을 사용합니다.
 
 ![The abstractions behind the C4 model]({{ site.baseurl }}/images/abstractions.png)
