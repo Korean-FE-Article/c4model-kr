@@ -11,7 +11,7 @@ permalink: /tooling
 
 - 다이어그램을 작성한 사람은 누구이며, 얼마나 기술적인가요?
 - 다이어그램의 대상 독자는 누구이며, 그들은 어떻게 다이어그램/문서에 접근할까요?
-- [다이어그래밍 vs 모델링?]((/tooling#diagramming-vs-modelling))
+- [다이어그래밍 vs 모델링?]({{ site.baseurl }}/images//tooling#diagramming-vs-modelling)
 - "드래그 앤 드롭 UI" vs "코드로 된 다이어그램"?
 - 데이터를 소스 코드와 가까운 git에 저장 vs 도구/클라우드 서비스에 저장?
 - 풀 리퀘스트에 사용할 소스를 쉽게 구분할 수 있나요?
