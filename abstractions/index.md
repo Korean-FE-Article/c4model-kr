@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Abstractions
+title: 추상화
 nav_order: 3
 has_children: true
 permalink: /abstractions

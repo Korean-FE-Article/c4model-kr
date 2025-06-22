@@ -1,6 +1,6 @@
 ---
 layout: default
-title: More information
+title: 더 많은 정보
 nav_order: 90
 permalink: /more
 ---

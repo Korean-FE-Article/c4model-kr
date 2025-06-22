@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Queues and topics
-parent: Abstractions
+title: 큐와 토픽
+parent: 추상화
 nav_order: 12
 permalink: /abstractions/queues-and-topics
 ---

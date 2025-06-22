@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Review checklist
-parent: Diagrams
+title: 검토 체크리스트
+parent: 다이어그램
 nav_order: 12
 permalink: /diagrams/checklist
 ---

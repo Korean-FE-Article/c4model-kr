@@ -1,7 +1,7 @@
 ---
 layout: default
-title: 4. Code diagram
-parent: Diagrams
+title: 4. 코드 다이어그램
+parent: 다이어그램
 nav_order: 4
 permalink: /diagrams/code
 ---

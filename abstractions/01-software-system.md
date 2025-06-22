@@ -1,7 +1,7 @@
 ---
 layout: default
-title: 1. Software system
-parent: Abstractions
+title: 1. 소프트웨어 시스템
+parent: 추상화
 nav_order: 1
 permalink: /abstractions/software-system
 ---

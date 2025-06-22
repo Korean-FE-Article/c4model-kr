@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Introduction
+title: 개요
 nav_order: 2
 permalink: /introduction
 ---

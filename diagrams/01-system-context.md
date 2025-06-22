@@ -1,7 +1,7 @@
 ---
 layout: default
-title: 1. System context diagram
-parent: Diagrams
+title: 1. 시스템 컨텍스트 다이어그램
+parent: 다이어그램
 nav_order: 1
 permalink: /diagrams/system-context
 ---

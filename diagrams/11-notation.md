@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Notation
-parent: Diagrams
+title: 표기법(Notation)
+parent: 다이어그램
 nav_order: 11
 permalink: /diagrams/notation
 ---

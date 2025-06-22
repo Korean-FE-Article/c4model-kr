@@ -1,6 +1,6 @@
 ---
 layout: default
-title: FAQ
+title: 자주 묻는 질문
 nav_order: 20
 permalink: /faq
 ---

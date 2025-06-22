@@ -1,7 +1,7 @@
 ---
 layout: default
-title: 3. Component
-parent: Abstractions
+title: 3. 컴포넌트
+parent: 추상화
 nav_order: 3
 permalink: /abstractions/component
 ---

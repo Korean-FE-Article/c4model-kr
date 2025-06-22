@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Deployment diagram
-parent: Diagrams
+title: 배포 다이어그램
+parent: 다이어그램
 nav_order: 7
 permalink: /diagrams/deployment
 ---

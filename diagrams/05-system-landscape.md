@@ -1,7 +1,7 @@
 ---
 layout: default
-title: System landscape diagram
-parent: Diagrams
+title: 시스템 랜드스케이프 다이어그램
+parent: 다이어그램
 nav_order: 5
 permalink: /diagrams/system-landscape
 ---

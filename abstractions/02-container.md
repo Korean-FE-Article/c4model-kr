@@ -1,7 +1,7 @@
 ---
 layout: default
-title: 2. Container
-parent: Abstractions
+title: 2. 컨테이너
+parent: 추상화
 nav_order: 2
 permalink: /abstractions/container
 ---

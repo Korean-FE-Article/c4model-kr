@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Dynamic diagram
-parent: Diagrams
+title: 동적 다이어그램
+parent: 다이어그램
 nav_order: 6
 permalink: /diagrams/dynamic
 ---

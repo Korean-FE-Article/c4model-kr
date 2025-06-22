@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Example
-parent: Diagrams
+title: 예시
+parent: 다이어그램
 nav_order: 19
 permalink: /diagrams/example
 ---

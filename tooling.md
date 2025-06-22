@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Tooling
+title: 도구 선택(Tooling)
 nav_order: 6
 permalink: /tooling
 ---

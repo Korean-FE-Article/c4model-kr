@@ -1,7 +1,7 @@
 ---
 layout: default
-title: FAQ
-parent: Abstractions
+title: 자주 묻는 질문
+parent: 추상화
 nav_order: 99
 permalink: /abstractions/faq
 ---
