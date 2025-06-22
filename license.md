@@ -1,6 +1,6 @@
 ---
 layout: default
-title: License
+title: 라이센스
 nav_order: 99
 permalink: /license
 ---
