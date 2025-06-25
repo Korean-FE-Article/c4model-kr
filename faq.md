@@ -53,15 +53,15 @@ C4 모델에 덜 적합한 솔루션으로는 임베디드 시스템/펌웨어, 
 
 다음은 여러 개의 마이크로서비스로 구성된 소프트웨어 시스템을 보여주는 컨테이너 다이어그램의 예입니다.
 
-[![]({{ site.baseurl }}/images//images/scale-1.png)]({{ site.baseurl }}/images/scale-1.png)
+[![]({{ site.baseurl }}/images/scale-1.png)]({{ site.baseurl }}/images/scale-1.png)
 
 이 다이어그램은 현재로서는 잘 작동하지만, 서비스를 더 추가할수록 복잡해질 것입니다. 다른 방법으로, 8개의 서비스를 보여주는 하나의 다이어그램을 만드는 대신, 각각 하나의 서비스에 집중하고 가장 가까운 유입(인바운드) 및 유출(아웃바운드) 종속성을 보여주는 8개의 다이어그램을 만들 수 있습니다.
 
-| [![]({{ site.baseurl }}/images//images/scale-2.png)]({{ site.baseurl }}/images/scale-2.png) | [![]({{ site.baseurl }}/images//images/scale-3.png)]({{ site.baseurl }}/images/scale-3.png) | [![]({{ site.baseurl }}/images//images/scale-4.png)]({{ site.baseurl }}/images/scale-4.png) |
-| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| Service 1                                                                                   | Service 2                                                                                   | Service 3                                                                                   |
+| [![]({{ site.baseurl }}/images/scale-2.png)]({{ site.baseurl }}/images/scale-2.png) | [![]({{ site.baseurl }}/images/scale-3.png)]({{ site.baseurl }}/images/scale-3.png) | [![]({{ site.baseurl }}/images/scale-4.png)]({{ site.baseurl }}/images/scale-4.png) |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| Service 1                                                                           | Service 2                                                                           | Service 3                                                                           |
 
 이 작업은 다이어그래밍 도구에서는 어렵지만 모델링 도구에서는 간단합니다. 자세한 내용은 [다이어그래밍과 모델링]({{ site.baseurl }}/tooling#diagramming-vs-modelling)을 참고하세요. 여기서 단점은 "큰 그림"을 놓칠 수 있다는 것입니다. 따라서 기존의 "상자와 선" 다이어그램처럼 장황하지 않은 다른 시각화 방법을 만드는 것이 또 다른 옵션일 수 있습니다. 다시 말하지만, 모델링 도구를 사용하고 소프트웨어 아키텍처 모델을 다양한 방식으로 시각화할 수 있는 데이터 구조로 생각하면 비교적 간단합니다.
 
 |-|-|
-|[![]({{ site.baseurl }}/images//images/scale-5.png)]({{ site.baseurl }}/images/scale-5.png)|[![]({{ site.baseurl }}/images//images/scale-6.png)]({{ site.baseurl }}/images/scale-6.png)|
+|[![]({{ site.baseurl }}/images/scale-5.png)]({{ site.baseurl }}/images/scale-5.png)|[![]({{ site.baseurl }}/images/scale-6.png)]({{ site.baseurl }}/images/scale-6.png)|
